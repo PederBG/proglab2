@@ -9,5 +9,3 @@ class Sensob:
         #Temporary code for receiving values from sensors
         for sensor in self.sensors:
             tempValue = sensor.get_value()
-
-            #Najs

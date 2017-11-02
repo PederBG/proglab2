@@ -15,7 +15,7 @@ class BBCON():
     def add_sensObj(self, sensObj):
         self.Sens_Objs.append(sensObj)
 
-    def Add_active_behavior(self, behavior):
+    def add_active_behavior(self, behavior):
         if behavior in self.Behaviors:
             self.Active_behaviors.append(behavior)
 
