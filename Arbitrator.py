@@ -3,11 +3,11 @@
 
 import BBCON
 
-class arbitrator():
+class Arbitrator():
 
-    def __init__(self):
+    def __init__(self, BBCONActiveBehaviors):
         self.behaviors = {"Approche": 0, "Back Off": 0}
-        self.BBCONsActive_behaviors = BBCON.Active_behaviors
+        self.BBCONsActive_behaviors = BBCONActiveBehaviors
 
     def uppdate(self):
         for behaveObj in self.BBCONsActive_behaviors:
