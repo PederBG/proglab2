@@ -15,6 +15,12 @@ class BBCON():
     def add_sensObj(self, sensObj): #append a newly-created sensob onto the sensobs list.
         self.Sens_Objs.append(sensObj)
 
+    def add_arbitrator(self, arbitrator): #append a newly-created sensob onto the sensobs list.
+        self.Arbitrator = arbitrator
+
+    def add_mot_obj(self, mot_obj): #append a newly-created sensob onto the sensobs list.
+        self.Mot_Objs = mot_obj
+
     def Add_active_behavior(self, behavior): #add an existing behavior onto the active-behaviors list
         if behavior in self.Behaviors:
             self.Active_behaviors.append(behavior)
