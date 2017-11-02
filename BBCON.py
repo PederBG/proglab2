@@ -12,18 +12,18 @@ class BBCON():
     def add_behavior(self, behavior): #append a newly-created behavior onto the behaviors list.
         self.Behaviors.append(behavior)
 
-    def add_sensObj(self, sensObj):
+    def add_sensObj(self, sensObj): #append a newly-created sensob onto the sensobs list.
         self.Sens_Objs.append(sensObj)
 
-    def Add_active_behavior(self, behavior):
+    def Add_active_behavior(self, behavior): #add an existing behavior onto the active-behaviors list
         if behavior in self.Behaviors:
             self.Active_behaviors.append(behavior)
 
-    def deactive_behavior(self, behavior):
+    def deactive_behavior(self, behavior): #remove an existing behavior from the active behaviors list.
         if behavior in self.Active_behaviors:
             self.Active_behaviors.remove(behavior)
 
-    def run_one_timestep(self):
+    def run_one_timestep(self): # constitutes the core BBCON activity
         self.update_all_sensObs()
         self.update_all_behaviors()
         self.choose_action()
@@ -31,19 +31,19 @@ class BBCON():
         self.wait()
         self.reset_sensObs()
 
-    def update_all_sensObs(self):
+    def update_all_sensObs(self): #These updates will involve querying the relevant sensors for their values, along with any pre-processing of those values
         #stå noe her
 
-    def update_all_behaviors(self):
+    def update_all_behaviors(self): # These updates involve reading relevant sensob values and producing a motor recommendation.
         #stå noe her
 
-    def choose_action(self):
+    def choose_action(self): # choose a winning behavior and return that behavior’s motor recommendations and halt request flag.
         return self.Arbitrator.choose_action()
 
-    def update_motObs(self):
+    def update_motObs(self): #
         #stå noe her
 
-    def wait(self, Secs = 0): # Sekunder, 1 = 1000ms
+    def wait(self, Secs = 0): # This pause (in code execution) will allow the motor settings to remain active for a short period of time
         time.sleep(Secs)
 
     def reset_sensObs(self, sensObs): #Each sensob may need to reset itself, or its associated sensor(s), in some way.
