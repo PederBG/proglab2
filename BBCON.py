@@ -32,23 +32,19 @@ class BBCON():
         self.reset_sensObs()
 
     def update_all_sensObs(self):
-        test = 2
         #stå noe her
 
     def update_all_behaviors(self):
-        test = 1
         #stå noe her
 
     def choose_action(self):
         return self.Arbitrator.choose_action()
 
     def update_motObs(self):
-        test = 0
         #stå noe her
 
     def wait(self, Secs = 0): # Sekunder, 1 = 1000ms
         time.sleep(Secs)
 
     def reset_sensObs(self, sensObs): #Each sensob may need to reset itself, or its associated sensor(s), in some way.
-        test = 0
         #stå noe her
