@@ -10,3 +10,4 @@ class Sensob:
         for sensor in self.sensors:
             tempValue = sensor.get_value()
 
+            #Najs
