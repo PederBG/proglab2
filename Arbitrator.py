@@ -1,18 +1,16 @@
-
 ## The motor object (motob) manifests an interface between a behavior and one or more motors (a.k.a. actuators)
 
-from Proglab2.Øving6.Proglab6.BBCON import BBCON
 import operator
 
 class Arbitrator():
 
     def __init__(self, BBCONActiveBehaviors):
-        self.behaviors = {"Approche": 0, "Back Off": 0}
+        self.behaviors = {"Approach": 0, "Back Off": 0}
         self.BBCONsActive_behaviors = BBCONActiveBehaviors
 
     def uppdate(self):
         for behaveObj in self.BBCONsActive_behaviors:
-            self.behaviors[behaveObj.getname] += behaveObj.getValue
+            self.behaviors[behaveObj.getname] = behaveObj.getValue
 
     def chooseBest(self):
         sortedBehaviors = sorted(self.behaviors.items(), key=operator.itemgetter(1))
@@ -20,8 +18,3 @@ class Arbitrator():
         for behavior in self.BBCONsActive_behaviors:
             if behavior.getName() == name:
                 return behavior.recomondation()
-
-
-
-
-

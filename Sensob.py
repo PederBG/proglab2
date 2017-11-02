@@ -1,5 +1,6 @@
 from ultrasonic import Ultrasonic
 
+#SuperClass for SensobObjects
 class Sensob(object):
     def __init__(self):
         pass
