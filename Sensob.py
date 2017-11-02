@@ -5,9 +5,6 @@ class Sensob(object):
         pass
 
     def update(self):
-        #Temporary code for receiving values from sensors
-        for sensor in self.sensors:
-            tempValue = sensor.get_value()
         pass
 
     def get_value(self):
