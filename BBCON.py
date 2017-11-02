@@ -56,7 +56,7 @@ class BBCON():
     def update_motObs(self): #
         #stå noe her
 
-    def wait(self, Secs = 0): # This pause (in code execution) will allow the motor settings to remain active for a short period of time
+    def wait(self, Secs = 0.5): # This pause (in code execution) will allow the motor settings to remain active for a short period of time
         time.sleep(Secs)
 
     def reset_sensObs(self, sensObs): #Each sensob may need to reset itself, or its associated sensor(s), in some way.
