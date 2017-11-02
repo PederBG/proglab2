@@ -24,7 +24,10 @@ class Approach(Behavior):
 
     def get_priority_weight(self):
         dist = self.controller.lookAhed.get_value()
-        return dist
+        if dist > 100:
+            return 1
+        else:
+            return dist / 100
 
 
 class BackOff(Behavior):
@@ -36,4 +39,7 @@ class BackOff(Behavior):
 
     def get_priority_weight(self):
         dist = self.controller.lookAhed.get_value()
-        return 100 - dist
+        if dist > 100:
+            return 0
+        else:
+            return 100-dist / 100
