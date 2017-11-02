@@ -5,6 +5,11 @@ class Sensob(object):
         pass
 
     def update(self):
+<<<<<<< HEAD
+        #Temporary code for receiving values from sensors
+        for sensor in self.sensors:
+            tempValue = sensor.get_value()
+=======
         pass
 
     def get_value(self):
@@ -21,3 +26,4 @@ class LookAhead(Sensob):
 
     def get_value(self):
         return self.value
+>>>>>>> acdb69d952214fa3886c15cd0f1ff1a556e3bc1a

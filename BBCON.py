@@ -3,6 +3,7 @@ from library.irproximity_sensor import IRProximitySensor
 from library.reflectance_sensors import ReflectanceSensors
 from library.ultrasonic import Ultrasonic
 from library.camera import Camera
+from Sensob import Sensob
 
 class BBCON():
 
@@ -28,6 +29,7 @@ class BBCON():
     def Add_active_behavior(self, behavior): #add an existing behavior onto the active-behaviors list
         if behavior in self.Behaviors:
             self.Active_behaviors.append(behavior)
+            self.Arbitrator.BBCONsActive_behaviors = self.Active_behaviors
 
     def deactive_behavior(self, behavior): #remove an existing behavior from the active behaviors list.
         if behavior in self.Active_behaviors:
@@ -42,7 +44,8 @@ class BBCON():
         self.reset_sensObs()
 
     def update_all_sensObs(self): #These updates will involve querying the relevant sensors for their values, along with any pre-processing of those values
-        #stå noe her
+        for sensObj in self.Sens_Objs:
+            sensObj.update()
 
     def update_all_behaviors(self): # These updates involve reading relevant sensob values and producing a motor recommendation.
         #stå noe her

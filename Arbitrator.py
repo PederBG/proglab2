@@ -4,11 +4,11 @@
 from Proglab2.Øving6.Proglab6.BBCON import BBCON
 import operator
 
-class arbitrator():
+class Arbitrator():
 
-    def __init__(self):
+    def __init__(self, BBCONActiveBehaviors):
         self.behaviors = {"Approche": 0, "Back Off": 0}
-        self.BBCONsActive_behaviors = BBCON.Active_behaviors
+        self.BBCONsActive_behaviors = BBCONActiveBehaviors
 
 
 
