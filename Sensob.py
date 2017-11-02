@@ -1,4 +1,4 @@
-from ultrasonic import Ultrasonic
+from lib.ultrasonic import Ultrasonic
 
 #SuperClass for SensobObjects
 class Sensob(object):

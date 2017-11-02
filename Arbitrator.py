@@ -8,11 +8,12 @@ class Arbitrator():
         self.behaviors = {"Approach": 0, "Back Off": 0}
         self.BBCONsActive_behaviors = BBCONActiveBehaviors
 
-    def uppdate(self):
+    def update(self):
         for behaveObj in self.BBCONsActive_behaviors:
             self.behaviors[behaveObj.getname] = behaveObj.getValue
 
     def chooseBest(self):
+        self.update()
         sortedBehaviors = sorted(self.behaviors.items(), key=operator.itemgetter(1))
         name = sortedBehaviors[-1][0]
         for behavior in self.BBCONsActive_behaviors:

@@ -1,5 +1,6 @@
 from Proglab6.camera import Camera
 from Proglab6.imager2 import Imager
+
 from PIL import Image
 im = Image.open("redTest.jpg")
 red = []
