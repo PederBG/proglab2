@@ -16,5 +16,4 @@ bbcon.add_mot_obj(Motob())
 
 while(True):
     bbcon.run_one_timestep()
-    motor_recommendation = bbcon.Arbitrator.chooseBest()
-    bbcon.Mot_Objs.apply_motor_recommendation()
+

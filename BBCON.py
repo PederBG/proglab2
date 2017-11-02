@@ -37,27 +37,22 @@ class BBCON():
 
     def run_one_timestep(self): # constitutes the core BBCON activity
         self.update_all_sensObs()
-        self.update_all_behaviors()
-        self.choose_action()
-        self.update_motObs()
+        motorRecommendation = self.choose_action()
+        self.update_motObs(motorRecommendation)
         self.wait()
-        self.reset_sensObs()
 
     def update_all_sensObs(self): #These updates will involve querying the relevant sensors for their values, along with any pre-processing of those values
         for sensObj in self.Sens_Objs:
             sensObj.update()
 
-    def update_all_behaviors(self): # These updates involve reading relevant sensob values and producing a motor recommendation.
-        #stå noe her
-
     def choose_action(self): # choose a winning behavior and return that behavior’s motor recommendations and halt request flag.
-        return self.Arbitrator.choose_action()
+        return self.Arbitrator.chooseBest()
 
-    def update_motObs(self): #
-        #stå noe her
+    def update_motObs(self, motorRecommendation): #
+        self.Mot_Objs.apply_motor_recommendation(motorRecommendation)
 
     def wait(self, Secs = 0.5): # This pause (in code execution) will allow the motor settings to remain active for a short period of time
         time.sleep(Secs)
 
     def reset_sensObs(self, sensObs): #Each sensob may need to reset itself, or its associated sensor(s), in some way.
-        #stå noe her
+        pass
