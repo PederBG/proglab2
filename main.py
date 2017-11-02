@@ -11,7 +11,7 @@ bbcon.add_behavior(BackOff())
 
 bbcon.add_sensObj(LookAhead())
 
-bbcon.add_arbitrator(Arbitrator())
+bbcon.set_arbitrator(Arbitrator())
 bbcon.add_mot_obj(Motob())
 
 while(True):
