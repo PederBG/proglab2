@@ -10,9 +10,6 @@ class Arbitrator():
         self.behaviors = {"Approche": 0, "Back Off": 0}
         self.BBCONsActive_behaviors = BBCONActiveBehaviors
 
-
-
-
     def uppdate(self):
         for behaveObj in self.BBCONsActive_behaviors:
             self.behaviors[behaveObj.getname] += behaveObj.getValue
