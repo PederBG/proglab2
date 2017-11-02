@@ -1,4 +1,8 @@
 import time
+from library.irproximity_sensor import IRProximitySensor
+from library.reflectance_sensors import ReflectanceSensors
+from library.ultrasonic import Ultrasonic
+from library.camera import Camera
 
 class BBCON():
 
