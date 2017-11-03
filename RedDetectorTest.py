@@ -1,8 +1,10 @@
-from Proglab6.camera import Camera
-from Proglab6.imager2 import Imager
+from lib.camera import Camera
+from lib.imager2 import Imager
 
 from PIL import Image
-im = Image.open("redTest.jpg")
+cam = Camera()
+
+im = Image.open(cam.update())
 red = []
 green = []
 blue = []
