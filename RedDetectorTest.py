@@ -1,8 +1,13 @@
+#from lib.imager2 import Imager
 from lib.camera import Camera
+import os
 from PIL import Image
+import numpy as np
 
 class RedDetect():
-    image = Image.open("blueTest.jpg")
+    #imager = Imager()
+    cam = Camera()
+    image = Image.open(os.system(cam.sensor_get_value())) # tar bilde med kameraet og bruker dette
     pixels = image.load()
     meanValue = 0
     turnValue = 0

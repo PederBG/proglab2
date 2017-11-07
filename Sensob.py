@@ -27,7 +27,7 @@ class LookAhead(Sensob):
     def get_value(self):
         return self.value
 
-class IsRed(Sensob):
+class CheckForRed(Sensob):
 
     def __init__(self):
         self.sensor = RedDetect()
