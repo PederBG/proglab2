@@ -1,14 +1,14 @@
 from abc import abstractmethod
 import random
 from Sensob import LookAhead
-from Sensob import IsRed
+from Sensob import CheckForRed
 from Sensob import LookUnder
 
 def recommended(command, speed=0.25, duration=0.1):
         return [command, speed, duration]
 
 look_ahead = LookAhead()
-is_red = IsRed()
+is_red = CheckForRed()
 look_under = LookUnder()
 
 class Behavior():
@@ -94,8 +94,6 @@ class DetectEdge(Behavior):
         else:
             self.priority_weight = 0.5
             self.action_rec = recommended("F")
-
-
 
 
     def get_name(self):
