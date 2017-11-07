@@ -1,13 +1,13 @@
 #from lib.imager2 import Imager
 from lib.camera import Camera
-import os
+#import os
 from PIL import Image
-import numpy as np
+#import numpy as np
 
 class RedDetect():
     #imager = Imager()
      # tar bilde med kameraet og bruker dette
-    #pixels = image.load()
+
     #meanValue = 0
     def __init__(self):
         #self.meanValue = 0
@@ -32,7 +32,7 @@ class RedDetect():
     def update(self): #Returnerer hoyre r-value / venstre r-value
         cam = Camera.update()
         im = Image.open(cam)
-        pix = self.pixels
+        pix = im.load()
         left = []
         right = []
         """left = im.crop((0, 0, im.width // 2, im.height))
