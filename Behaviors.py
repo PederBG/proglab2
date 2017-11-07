@@ -1,11 +1,15 @@
 from abc import abstractmethod
 import operator
 from Sensob import LookAhead
+from Sensob import IsRed
+from Sensob import LookUnder
 
 def recommended(command, speed=0.25, duration=0.1):
         return [command, speed, duration]
 
 look_ahead = LookAhead()
+is_red = IsRed()
+look_under = LookUnder()
 
 class Behavior():
     def __init__(self):
@@ -38,11 +42,19 @@ class Approach(Behavior):
         for element in self.sens_obs:
             element.update()
 
+
+    def calculate(self):
+        avstand_i_cm = self.sens_obs[0].get_value()
+        if avstand_i_cm < 2:
+            self.priority_weight = 1
+
+
     def get_name(self):
         return "Approach"
 
     def get_action_rec(self):
         return recommended('L')
+
 
     def get_priority_weight(self):
         dist = self.controller.lookAhed.get_value()
@@ -71,3 +83,6 @@ class BackOff(Behavior):
 
     def get_name(self):
         return "BackOff"
+
+
+class Approachred(Behavior):
