@@ -39,8 +39,8 @@ class Approach(Behavior):
         self.sens_obs.append(look_ahead)
 
     def update(self):
-        for element in self.sens_obs:
-            element.update()
+        for sens_obj in self.sens_obs:
+            sens_obj.update()
         self.calculate()
 
     def calculate(self):
@@ -48,7 +48,7 @@ class Approach(Behavior):
         distance = self.sens_obs[0].get_value()
         if distance < 10:
             self.priority_weight = 1
-            self.action_rec = recommended(a[random.randint(0,2)])
+            self.action_rec = recommended(a[random.randint(0,1)])
         else:
             self.priority_weight = self.set_priority_weight()
             self.action_rec = recommended("F")
@@ -69,8 +69,8 @@ class Approach(Behavior):
         else:
             return dist / 100
 
-class BackOff(Behavior):
-    def __init__(self):
+#class BackOff(Behavior):
+#    def __init__(self):
 #        super().__init__()
 #        self.sens_obs.append(look_ahead)
 #
@@ -80,18 +80,42 @@ class BackOff(Behavior):
 #
 #        self.action_rec = recommended('L')
 #        self.priority_weight = 1
+#
+#    def get_action_rec(self):
+#        return self.action_rec
+#
+#    def get_priority_weight(self):
+#        return self.priority_weight
+#
+#    def get_name(self):
+#        return "BackOff"
+
+class DetectEdge(Behavior):
+    def __init__(self):
+        super().__init__()
+        self.sens_obs.append(look_under)
+
+    def update(self):
+        for sens_obj in self.sens_obs:
+            sens_obj.update()
+        self.calculate()
+
+    def calculate(self):
+        light_values = self.sens_obs[0]
+        darkest = min(light_values)
+        index = light_values.index(darkest)
+        if darkest < 0.2:
+
+
+
+    def get_name(self):
+        return "DetectEdge"
 
     def get_action_rec(self):
         return self.action_rec
 
     def get_priority_weight(self):
         return self.priority_weight
-
-    def get_name(self):
-        return "BackOff"
-
-class DetectEdge(Behavior):
-    pass
 
 class Approachred(Behavior):
     pass
