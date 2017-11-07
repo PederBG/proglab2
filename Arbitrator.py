@@ -4,7 +4,7 @@ import operator
 
 class Arbitrator():
 
-    def __init__(self, active_behaviors):
+    def __init__(self, active_behaviors = []):
         self.behaviors = {"Approach": 0, "BackOff": 0}
         self.active_behaviors = active_behaviors
 
