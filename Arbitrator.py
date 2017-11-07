@@ -4,18 +4,19 @@ import operator
 
 class Arbitrator():
 
-    def __init__(self, BBCONActiveBehaviors):
-        self.behaviors = {"Approach": 0, "Back Off": 0}
-        self.BBCONsActive_behaviors = BBCONActiveBehaviors
+    def __init__(self, active_behaviors):
+        self.behaviors = {"Approach": 0, "BackOff": 0}
+        self.active_behaviors = active_behaviors
 
     def update(self):
-        for behaveObj in self.BBCONsActive_behaviors:
-            self.behaviors[behaveObj.getname] = behaveObj.getValue
+        for behavior in self.active_behaviors:
+            behavior.update()
+            self.behaviors[behavior.get_name()] = behavior.get_priority_weight()
 
-    def chooseBest(self):
+    def choose_best(self):
         self.update()
-        sortedBehaviors = sorted(self.behaviors.items(), key=operator.itemgetter(1))
-        name = sortedBehaviors[-1][0]
-        for behavior in self.BBCONsActive_behaviors:
-            if behavior.getName() == name:
-                return behavior.recomondation()
+        sorted_behaviors = sorted(self.behaviors.items(), key=operator.itemgetter(1))
+        name = sorted_behaviors[-1][0]
+        for behavior in self.active_behaviors:
+            if behavior.get_name() == name:
+                return behavior.get_action_rec()
