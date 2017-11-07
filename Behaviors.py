@@ -1,5 +1,5 @@
 from abc import abstractmethod
-import operator
+import random
 from Sensob import LookAhead
 from Sensob import IsRed
 from Sensob import LookUnder
@@ -41,23 +41,29 @@ class Approach(Behavior):
     def update(self):
         for element in self.sens_obs:
             element.update()
-
+        self.claculate()
 
     def calculate(self):
+        a = ["L", "R"]
         avstand_i_cm = self.sens_obs[0].get_value()
         if avstand_i_cm < 2:
             self.priority_weight = 1
-
+            recommended(a[random.randint(0,2)])
+        else:
+            self.priority_weight = self.set_priority_weight()
+            recommended("F")
 
     def get_name(self):
         return "Approach"
 
     def get_action_rec(self):
-        return recommended('L')
-
+        self.action_rec
 
     def get_priority_weight(self):
-        dist = self.controller.lookAhed.get_value()
+        return self.priority_weight
+
+    def set_priority_weight(self):
+        dist = self.lookAhed.get_value()
         if dist > 100:
             return 1
         else:
@@ -84,5 +90,6 @@ class BackOff(Behavior):
     def get_name(self):
         return "BackOff"
 
+class DetectEdge(Behavior):
 
 class Approachred(Behavior):
