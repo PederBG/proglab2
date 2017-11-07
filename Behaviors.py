@@ -36,34 +36,34 @@ class Behavior():
 class Approach(Behavior):
     def __init__(self):
         super().__init__()
-        super.sens_obs.append(look_ahead)
+        self.sens_obs.append(look_ahead)
 
     def update(self):
         for element in self.sens_obs:
             element.update()
-        self.claculate()
+        self.calculate()
 
     def calculate(self):
         a = ["L", "R"]
-        avstand_i_cm = self.sens_obs[0].get_value()
-        if avstand_i_cm < 2:
+        distance = self.sens_obs[0].get_value()
+        if distance < 10:
             self.priority_weight = 1
-            recommended(a[random.randint(0,2)])
+            self.action_rec = recommended(a[random.randint(0,2)])
         else:
             self.priority_weight = self.set_priority_weight()
-            recommended("F")
+            self.action_rec = recommended("F")
 
     def get_name(self):
         return "Approach"
 
     def get_action_rec(self):
-        self.action_rec
+        return self.action_rec
 
     def get_priority_weight(self):
         return self.priority_weight
 
     def set_priority_weight(self):
-        dist = self.lookAhed.get_value()
+        dist = self.sens_obs[0].get_value()
         if dist > 100:
             return 1
         else:
