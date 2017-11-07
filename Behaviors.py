@@ -68,28 +68,7 @@ class Approach(Behavior):
             return 1
         else:
             return dist / 100
-
-#class BackOff(Behavior):
-#    def __init__(self):
-#        super().__init__()
-#        self.sens_obs.append(look_ahead)
-#
-#    def update(self):
-#        for obs in self.sens_obs:
-#            obs.update()
-#
-#        self.action_rec = recommended('L')
-#        self.priority_weight = 1
-#
-#    def get_action_rec(self):
-#        return self.action_rec
-#
-#    def get_priority_weight(self):
-#        return self.priority_weight
-#
-#    def get_name(self):
-#        return "BackOff"
-
+        
 class DetectEdge(Behavior):
     def __init__(self):
         super().__init__()
@@ -107,7 +86,6 @@ class DetectEdge(Behavior):
         if darkest < 0.2:
 
 
-
     def get_name(self):
         return "DetectEdge"
 
@@ -117,5 +95,5 @@ class DetectEdge(Behavior):
     def get_priority_weight(self):
         return self.priority_weight
 
-class Approachred(Behavior):
+class ApproachRed(Behavior):
     pass
