@@ -1,7 +1,9 @@
 
-from Proglab6.lib.camera import Camera
+from lib.camera import Camera
 
 from PIL import Image
+
+
 cam = Camera()
 
 im = Image.open(cam.update())
@@ -38,3 +40,5 @@ elif leftTurn/rightTurn > 2:
     print("Turn left (" + str(leftTurn/rightTurn) + ")")
 else:
     print("Straight")
+
+print("Hei")
