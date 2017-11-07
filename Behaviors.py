@@ -1,7 +1,6 @@
 from abc import abstractmethod
 import random
 from Sensob import LookAhead
-from Sensob import CheckForRed
 from Sensob import LookUnder
 from Sensob import CheckForRed
 
@@ -50,7 +49,7 @@ class Approach(Behavior):
         distance = self.sens_obs[0].get_value()
         if distance < 10:
             self.priority_weight = 1
-            self.action_rec = recommended(a[random.randint(0, 1)])
+            self.action_rec = recommended(a[random.randint(0, 1)],1,4)
         else:
             self.priority_weight = self.set_priority_weight()
             self.action_rec = recommended("F")
@@ -83,19 +82,19 @@ class DetectEdge(Behavior):
 
     #Denne funksjonen er jallaballa
     def calculate(self):
+        left_or_rigth = ["R","L"]
         light_values = self.sens_obs[0]
-        darkest = min(light_values)
-        index = light_values.index(darkest)
-        if darkest < 0.2:
+        if sum(light_values[0,2]) > 2:
             self.priority_weight = 1
-            if index == 0: self.action_rec = recommended("R")
-            elif index == 1: self.action_rec = recommended("R",0.20,0.1)
-            elif index == 2: self.action_rec = recommended("R",0.15,0.1)
-            elif index == 3: self.action_rec = recommended("L",0.15,0.1)
-            elif index == 4: self.action_rec = recommended("L",0.20,0.1)
-            elif index == 5: self.action_rec = recommended("L")
+            self.action_rec = recommended("R")
+        elif sum(light_values[3:5]) > 2:
+            self.priority_weight = 1
+            self.action_rec = recommended("L")
+        elif sum(light_values) > 2:
+            self.priority_weight = 1
+            self.action_rec = recommended(left_or_rigth[random.randint(0,1)])
         else:
-            self.priority_weight = 0.5
+            self.priority_weight = 0.2
             self.action_rec = recommended("F")
 
     def get_name(self):
