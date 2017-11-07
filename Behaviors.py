@@ -3,13 +3,15 @@ import random
 from Sensob import LookAhead
 from Sensob import CheckForRed
 from Sensob import LookUnder
+from Sensob import CheckForRed
 
-def recommended(command, speed=0.25, duration=0.1):
+def recommended(command, speed=0.25, duration=5.1):
         return [command, speed, duration]
 
 look_ahead = LookAhead()
 is_red = CheckForRed()
 look_under = LookUnder()
+check_for_red = CheckForRed()
 
 class Behavior():
     def __init__(self):
@@ -79,6 +81,7 @@ class DetectEdge(Behavior):
             sens_obj.update()
         self.calculate()
 
+    #Denne funksjonen er jallaballa
     def calculate(self):
         light_values = self.sens_obs[0]
         darkest = min(light_values)
@@ -95,7 +98,6 @@ class DetectEdge(Behavior):
             self.priority_weight = 0.5
             self.action_rec = recommended("F")
 
-
     def get_name(self):
         return "DetectEdge"
 
@@ -106,4 +108,25 @@ class DetectEdge(Behavior):
         return self.priority_weight
 
 class ApproachRed(Behavior):
-    pass
+    def __init__(self):
+        super().__init__()
+        self.sens_obs.append(check_for_red)
+
+    def update(self):
+        for sens_obj in self.sens_obs:
+            sens_obj.update()
+        self.calculate()
+
+    def calculate(self):
+        pass
+
+
+
+    def get_name(self):
+        return "ApproachRed"
+
+    def get_action_rec(self):
+        return self.action_rec
+
+    def get_priority_weight(self):
+        return self.priority_weight
