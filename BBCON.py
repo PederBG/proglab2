@@ -29,6 +29,7 @@ class BBCON():
         self.motob = motob
 
     def run_one_timestep(self): # constitutes the core BBCON activity
+        self.arbitrator.update()
         motor_recommendation = self.arbitrator.choose_action()
         self.update_motob(motor_recommendation)
         self.wait()

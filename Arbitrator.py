@@ -5,10 +5,12 @@ import operator
 class Arbitrator():
 
     def __init__(self, active_behaviors = []):
-        self.behaviors = {"Approach": 0, "BackOff": 0}
+        self.behaviors = {"Approach": 0, "DetectEdge": 0, "ApproachRed": 0}
         self.active_behaviors = active_behaviors
 
     def update(self):
+        for behavior in self.behaviors:
+            self.behaviors[behavior] = 0
         for behavior in self.active_behaviors:
             behavior.update()
             self.behaviors[behavior.get_name()] = behavior.get_priority_weight()
