@@ -48,7 +48,7 @@ class Approach(Behavior):
         distance = self.sens_obs[0].get_value()
         if distance < 10:
             self.priority_weight = 1
-            self.action_rec = recommended(a[random.randint(0,1)])
+            self.action_rec = recommended(a[random.randint(0, 1)])
         else:
             self.priority_weight = self.set_priority_weight()
             self.action_rec = recommended("F")
