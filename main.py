@@ -1,18 +1,20 @@
 from BBCON import BBCON
 from Arbitrator import Arbitrator
-from Sensob import LookAhead
 from Motob import Motob
 from Behaviors import Approach, BackOff
 
 bbcon = BBCON()
+arbitrator = Arbitrator()
+motob = Motob()
+approach = Approach()
+back_off = BackOff()
 
-bbcon.add_behavior(Approach())
-bbcon.add_behavior(BackOff())
-
-bbcon.add_sensObj(LookAhead())
-
-bbcon.set_arbitrator(Arbitrator())
-bbcon.add_mot_obj(Motob())
+bbcon.set_arbitrator(arbitrator)
+bbcon.set_motob(motob)
+bbcon.add_behavior(approach)
+bbcon.add_behavior(back_off)
+bbcon.add_active_behavior(approach)
+bbcon.add_active_behavior(back_off)
 
 while(True):
     bbcon.run_one_timestep()

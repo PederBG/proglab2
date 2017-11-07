@@ -13,10 +13,18 @@ class Arbitrator():
             behavior.update()
             self.behaviors[behavior.get_name()] = behavior.get_priority_weight()
 
-    def choose_best(self):
+    def choose_action(self):
         self.update()
         sorted_behaviors = sorted(self.behaviors.items(), key=operator.itemgetter(1))
         name = sorted_behaviors[-1][0]
         for behavior in self.active_behaviors:
             if behavior.get_name() == name:
                 return behavior.get_action_rec()
+
+    def add_active_behavior(self, behavior):
+        if(not behavior in self.active_behaviors):
+            self.active_behaviors.append(behavior)
+
+    def remove_active_behavior(self, behavior):
+        if(behavior in self.active_behaviors):
+            self.active_behaviors.remove(behavior)
