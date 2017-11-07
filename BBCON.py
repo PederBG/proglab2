@@ -10,7 +10,6 @@ class BBCON():
         self.Mot_Obj = mot_Obj # motorobjektet brukt av BBCON
         self.Arbitrator = arbitrator # the arbitrator object that will resolve actuator requests produced by the behaviors.
 
-
     def add_behavior(self, behavior): #append a newly-created behavior onto the behaviors list.
         self.Behaviors.append(behavior)
 
