@@ -71,15 +71,15 @@ class Approach(Behavior):
 
 class BackOff(Behavior):
     def __init__(self):
-        super().__init__()
-        super.sens_obs.append(look_ahead)
-
-    def update(self):
-        for obs in self.sens_obs:
-            obs.update()
-
-        self.action_rec = recommended('L')
-        self.priority_weight = 1
+#        super().__init__()
+#        self.sens_obs.append(look_ahead)
+#
+#    def update(self):
+#        for obs in self.sens_obs:
+#            obs.update()
+#
+#        self.action_rec = recommended('L')
+#        self.priority_weight = 1
 
     def get_action_rec(self):
         return self.action_rec
@@ -91,5 +91,7 @@ class BackOff(Behavior):
         return "BackOff"
 
 class DetectEdge(Behavior):
+    pass
 
 class Approachred(Behavior):
+    pass
