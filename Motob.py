@@ -1,8 +1,7 @@
 from lib.motors import Motors
 
 class Motob:
-
-    def __int__(self):
+    def __init__(self):
         self.motors = Motors()
 
     def apply_motor_recommendation(self, motor_recommendation):
