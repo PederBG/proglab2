@@ -1,8 +1,11 @@
 from abc import abstractmethod
 import operator
+from Sensob import LookAhead
 
 def recommended(command, speed=0.25, duration=0.1):
         return [command, speed, duration]
+
+look_ahead = LookAhead()
 
 class Behavior():
     def __init__(self):
@@ -27,7 +30,7 @@ class Behavior():
         pass
 
 class Approach(Behavior):
-    def __init__(self, look_ahead):
+    def __init__(self):
         super().__init__()
         super.sens_obs.append(look_ahead)
 
@@ -49,9 +52,9 @@ class Approach(Behavior):
             return dist / 100
 
 class BackOff(Behavior):
-    def __init__(self, look_ahead, look_under):
+    def __init__(self):
         super().__init__()
-        super.sens_obs.append(look_ahead, look_under)
+        super.sens_obs.append(look_ahead)
 
     def update(self):
         for obs in self.sens_obs:
