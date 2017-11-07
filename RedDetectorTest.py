@@ -33,15 +33,15 @@ class RedDetect():
 
     def update(self): #Returnerer hoyre r-value / venstre r-value
         im = self.image
-        #pix = self.pixels
-        #left = []
-        #right = []
-        left = im.crop((0, 0, im.width // 2, im.height))
+        pix = self.pixels
+        left = []
+        right = []
+        """left = im.crop((0, 0, im.width // 2, im.height))
         right = im.crop((im.width // 2, 0, im.width, im.height))
 
         leftTurn = np.asarray(left.getdata(0), dtype=np.int, order="C")
-        rightTurn = np.asarray(right.getdata(0), dtype=np.int, order="C")
-        '''for x in range(0,im.width//2):
+        rightTurn = np.asarray(right.getdata(0), dtype=np.int, order="C")"""
+        for x in range(0,im.width//2):
             for y in range(im.height):
                 left.append(pix[x, y][0])
         leftTurn = sum(left) // len(left)
@@ -51,7 +51,7 @@ class RedDetect():
                 right.append(pix[x, y][0])
         rightTurn = sum(right) // len(right)
         #print("Right side:", sum(right) // len(right))
-        '''
+
         self.turnValue = rightTurn/leftTurn
         return self.turnValue
 
