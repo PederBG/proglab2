@@ -31,7 +31,7 @@ class RedDetect():
 
     def update(self): #Returnerer hoyre r-value / venstre r-value
         cam = Camera.update()
-        im = Image.open("image.png")
+        im = Image.open(cam)
         pix = self.pixels
         left = []
         right = []
