@@ -29,7 +29,6 @@ class Approach(Behavior):
         else:
             return dist / 100
 
-
 class BackOff(Behavior):
     def __init__(controller):
         super().__init__(controller)
@@ -43,3 +42,5 @@ class BackOff(Behavior):
             return 0
         else:
             return 100-dist / 100
+
+    

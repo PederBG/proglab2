@@ -22,7 +22,7 @@ class BBCON():
     def set_mot_obj(self, mot_obj): #append a newly-created sensob onto the sensobs list.
         self.Mot_Objs = mot_obj
 
-    def Add_active_behavior(self, behavior): #add an existing behavior onto the active-behaviors list
+    def add_active_behavior(self, behavior): #add an existing behavior onto the active-behaviors list
         if behavior in self.Behaviors:
             self.Active_behaviors.append(behavior)
             self.Arbitrator.BBCONsActive_behaviors = self.Active_behaviors
