@@ -45,7 +45,7 @@ class Approach(Behavior):
         self.calculate()
 
     def calculate(self):
-        left_or_rigth = ["L", "R"]
+        left_or_right = ["L", "R"]
         distance = self.sens_obs[0].get_value()
         if distance < 10:
             self.priority_weight = 1
