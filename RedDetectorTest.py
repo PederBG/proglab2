@@ -5,36 +5,16 @@ from PIL import Image
 #import numpy as np
 
 class RedDetect():
-    #imager = Imager()
-     # tar bilde med kameraet og bruker dette
-
-    #meanValue = 0
     def __init__(self):
-        #self.meanValue = 0
-        self.turnValue = 0
+        self.value = ("F",0.0)
 
-    '''def mean_value(self): #returnerer r-gjennomsnittsverdien til bildet
-        im = self.image
-        pix = self.pixels
-        red = []
-        #green = []
-        #blue = []
-        for x in range(im.width):
-            for y in range(im.height):
-                red.append(pix[x,y][0])
-                #green.append(pix[x, y][1])
-                #blue.append(pix[x, y][2])
-        self.meanValue = sum(red)//len(red)
-        return self.meanValue
-        #print("Green:", sum(green)//len(green))
-        #print("Blue:", sum(blue)//len(blue))'''
-
-    def update(self): #Returnerer hoyre r-value / venstre r-value
+    def turnVal(self): #Returnerer hoyre r-value / venstre r-value
         cam = Camera.update()
         im = Image.open(cam)
         pix = im.load()
         left = []
         right = []
+        all = []
         """left = im.crop((0, 0, im.width // 2, im.height))
         right = im.crop((im.width // 2, 0, im.width, im.height))
 
@@ -49,10 +29,22 @@ class RedDetect():
             for y in range(im.height):
                 right.append(pix[x, y][0])
         rightTurn = sum(right) // len(right)
-        #print("Right side:", sum(right) // len(right))
 
-        self.turnValue = rightTurn/leftTurn
-        return self.turnValue
+        for x in range(im.width):
+            for y in range(im.height):
+                all.append(pix[x, y][0])
+        forward = sum(all) // len(all)
+
+        if leftTurn/rightTurn > 3:
+            self.value = ("L", leftTurn//255)
+        elif rightTurn/leftTurn > 3:
+            self.value = ("R", rightTurn//255)
+        else:
+            self.value = ("F", forward//255)
+
+    def update(self):
+        self.turnVal()
+        return self.value
 
     def get_value(self):
-        return self.turnValue
+        return self.value
