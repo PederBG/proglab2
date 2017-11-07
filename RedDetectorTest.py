@@ -36,11 +36,11 @@ class RedDetect():
         forward = sum(all) // len(all)
 
         if leftTurn/rightTurn > 3:
-            self.value = ("L", leftTurn//255)
+            self.value = ("L", leftTurn/255)
         elif rightTurn/leftTurn > 3:
-            self.value = ("R", rightTurn//255)
+            self.value = ("R", rightTurn/255)
         else:
-            self.value = ("F", forward//255)
+            self.value = ("F", forward/255)
 
     def update(self):
         self.turnVal()
