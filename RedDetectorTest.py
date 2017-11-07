@@ -6,16 +6,14 @@ import numpy as np
 
 class RedDetect():
     #imager = Imager()
-    cam = Camera()
-    image = Image.open(os.system(cam.sensor_get_value())) # tar bilde med kameraet og bruker dette
-    pixels = image.load()
-    meanValue = 0
-    turnValue = 0
+     # tar bilde med kameraet og bruker dette
+    #pixels = image.load()
+    #meanValue = 0
     def __init__(self):
-        self.meanValue = 0
+        #self.meanValue = 0
         self.turnValue = 0
 
-    def mean_value(self): #returnerer r-gjennomsnittsverdien til bildet
+    '''def mean_value(self): #returnerer r-gjennomsnittsverdien til bildet
         im = self.image
         pix = self.pixels
         red = []
@@ -29,10 +27,11 @@ class RedDetect():
         self.meanValue = sum(red)//len(red)
         return self.meanValue
         #print("Green:", sum(green)//len(green))
-        #print("Blue:", sum(blue)//len(blue))
+        #print("Blue:", sum(blue)//len(blue))'''
 
     def update(self): #Returnerer hoyre r-value / venstre r-value
-        im = self.image
+        cam = Camera.update()
+        im = Image.open("image.png")
         pix = self.pixels
         left = []
         right = []
@@ -57,10 +56,3 @@ class RedDetect():
 
     def get_value(self):
         return self.turnValue
-
-        '''if rightTurn/leftTurn > 2:
-            print("Turn right (" + str(rightTurn/leftTurn) + ")")
-        elif leftTurn/rightTurn > 2:
-            print("Turn left (" + str(leftTurn/rightTurn) + ")")
-        else:
-            print("Straight")'''
