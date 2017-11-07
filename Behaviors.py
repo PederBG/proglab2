@@ -45,11 +45,11 @@ class Approach(Behavior):
         self.calculate()
 
     def calculate(self):
-        a = ["L", "R"]
+        left_or_rigth = ["L", "R"]
         distance = self.sens_obs[0].get_value()
         if distance < 10:
             self.priority_weight = 1
-            self.action_rec = recommended(a[random.randint(0, 1)],1,4)
+            self.action_rec = recommended("T")
         else:
             self.priority_weight = self.set_priority_weight()
             self.action_rec = recommended("F")
@@ -84,18 +84,21 @@ class DetectEdge(Behavior):
     def calculate(self):
         left_or_rigth = ["R","L"]
         light_values = self.sens_obs[0]
-        if sum(light_values[0,2]) > 2:
-            self.priority_weight = 1
-            self.action_rec = recommended("R")
-        elif sum(light_values[3:5]) > 2:
-            self.priority_weight = 1
-            self.action_rec = recommended("L")
-        elif sum(light_values) > 2:
-            self.priority_weight = 1
-            self.action_rec = recommended(left_or_rigth[random.randint(0,1)])
-        else:
-            self.priority_weight = 0.2
-            self.action_rec = recommended("F")
+        try:
+            if sum(light_values[0,2]) > 2:
+                self.priority_weight = 1
+                self.action_rec = recommended("R")
+            elif sum(light_values[3:5]) > 2:
+                self.priority_weight = 1
+                self.action_rec = recommended("L")
+            elif sum(light_values) > 2:
+                self.priority_weight = 1
+                self.action_rec = recommended(left_or_rigth[random.randint(0,1)])
+            else:
+                self.priority_weight = 0.2
+                self.action_rec = recommended("F")
+        except:
+            pass
 
     def get_name(self):
         return "DetectEdge"
@@ -117,7 +120,15 @@ class ApproachRed(Behavior):
         self.calculate()
 
     def calculate(self):
-        pass
+        try:
+            if self.sens_obs[0].get_value == 1:
+                pass
+            elif self.sens_obs[0].get_value == 1:
+                pass
+            else:
+                pass
+        except:
+            pass
 
 
 
