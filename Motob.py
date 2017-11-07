@@ -1,9 +1,10 @@
 from lib.motors import Motors
 
+motors = Motors()
 class Motob:
 
     def __int__(self):
-        self.motors = Motors()
+        self.motors = motors
 
     def apply_motor_recommendation(self, motor_recommendation):
         if(motor_recommendation[0] == 'L'):

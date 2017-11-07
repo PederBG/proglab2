@@ -2,7 +2,7 @@ import time
 
 class BBCON():
 
-    def __init__(self, behaviors = [], active_behaviors = [], sensobs = [], motob = None, arbitrator = None):
+    def __init__(self, behaviors = [], active_behaviors = [], motob = None, arbitrator = None):
         self.behaviors = behaviors # a list of all the behavior objects used by the bbcon
         self.active_behaviors = active_behaviors # a list of all behaviors that are currently active.
         self.motob = motob # motorobjektet brukt av BBCON
@@ -30,7 +30,7 @@ class BBCON():
 
     def run_one_timestep(self): # constitutes the core BBCON activity
         motor_recommendation = self.arbitrator.choose_action()
-        self.update_motObs(motor_recommendation)
+        self.update_motob(motor_recommendation)
         self.wait()
 
     def update_motob(self, motor_recommendation): #
