@@ -68,7 +68,7 @@ class Approach(Behavior):
             return 1
         else:
             return dist / 100
-        
+
 class DetectEdge(Behavior):
     def __init__(self):
         super().__init__()
@@ -84,6 +84,18 @@ class DetectEdge(Behavior):
         darkest = min(light_values)
         index = light_values.index(darkest)
         if darkest < 0.2:
+            self.priority_weight = 1
+            if index == 0: self.action_rec = recommended("R")
+            elif index == 1: self.action_rec = recommended("R",0.20,0.1)
+            elif index == 2: self.action_rec = recommended("R",0.15,0.1)
+            elif index == 3: self.action_rec = recommended("L",0.15,0.1)
+            elif index == 4: self.action_rec = recommended("L",0.20,0.1)
+            elif index == 5: self.action_rec = recommended("L")
+        else:
+            self.priority_weight = 0.5
+            self.action_rec = recommended("F")
+
+
 
 
     def get_name(self):
