@@ -25,7 +25,7 @@ class LookAhead(Sensob):
         self.value = self.sensor.get_value()
 
     def get_value(self):
-        return self.value
+        return self.value # returnerer avstand til objekt i cm
 
 class CheckForRed(Sensob):
 
@@ -38,7 +38,7 @@ class CheckForRed(Sensob):
         self.value = self.sensor.update()
 
     def get_value(self):
-        return self.sensor.get_value()
+        return self.sensor.get_value() # returnerer hoyre side / venstre side
 
 
 class LookUnder(Sensob):
@@ -52,4 +52,4 @@ class LookUnder(Sensob):
         self.value = self.sensor.get_value()
 
     def get_value(self):
-        return self.value
+        return self.value # returnerer en liste av lengde 6 med verdier mellom 0 og 1 der 1 er hvit

@@ -31,7 +31,7 @@ class RedDetect():
         #print("Green:", sum(green)//len(green))
         #print("Blue:", sum(blue)//len(blue))
 
-    def update(self): #Returnerer høyre r-value / venstre r-value
+    def update(self): #Returnerer hoyre r-value / venstre r-value
         im = self.image
         #pix = self.pixels
         #left = []
