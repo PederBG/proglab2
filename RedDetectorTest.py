@@ -1,5 +1,5 @@
-from lib.camera import Camera
-from lib.imager2 import Imager
+
+from Proglab6.lib.camera import Camera
 
 from PIL import Image
 cam = Camera()
