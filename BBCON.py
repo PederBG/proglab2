@@ -32,7 +32,7 @@ class BBCON():
         self.arbitrator.update()
         motor_recommendation = self.arbitrator.choose_action()
         self.update_motob(motor_recommendation)
-        self.wait()
+        
 
     def update_motob(self, motor_recommendation): #
         self.motob.apply_motor_recommendation(motor_recommendation)
