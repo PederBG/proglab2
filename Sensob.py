@@ -1,13 +1,10 @@
 from lib.ultrasonic import Ultrasonic
-<<<<<<< Updated upstream
-
 #SuperClass for SensobObjects
-=======
 from lib.reflectance_sensors import ReflectanceSensors
 from lib.camera import Camera
 from RedDetectorTest import RedDetect
 from lib.imager2 import Imager
->>>>>>> Stashed changes
+
 class Sensob(object):
     def __init__(self):
         pass
@@ -38,10 +35,10 @@ class IsRed(Sensob):
 
     def update(self):
         self.sensor.update()
-        self.value = self.sensor.()
+        self.value = self.sensor.update()
 
     def get_value(self):
-        return RedD.meanValue()
+        return self.sensor.get_value()
 
 
 class LookUnder(Sensob):
