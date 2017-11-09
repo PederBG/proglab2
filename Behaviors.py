@@ -83,8 +83,7 @@ class DetectEdge(Behavior):
 
     #Denne funksjonen er jallaballa
     def calculate(self):
-        left_or_rigth = ["R","L"]
-        light_values = self.sens_obs[0]
+        light_values = self.sens_obs[0].get_value()
         try:
             if sum(light_values[0,2]) > 2:
                 self.priority_weight = 1
@@ -99,7 +98,7 @@ class DetectEdge(Behavior):
                 self.priority_weight = 0.2
                 self.action_rec = recommended("F")
         except:
-            pass
+            print("Calculate crashed")
 
     def get_name(self):
         return "DetectEdge"
@@ -108,7 +107,8 @@ class DetectEdge(Behavior):
         return self.action_rec
 
     def get_priority_weight(self):
-        return self.priority_weight
+        #return self.priority_weight
+        return 1
 
 class ApproachRed(Behavior):
     def __init__(self):
