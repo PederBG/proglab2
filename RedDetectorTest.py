@@ -34,10 +34,10 @@ class RedDetect():
             for y in range(im.height):
                 all.append(pix[x, y][0])
         forward = sum(all) // len(all)
-
-        if leftTurn/rightTurn > 3:
+        print("Leftturn :", leftTurn, "Rightturn: ", rightTurn)
+        if leftTurn/rightTurn > 2:
             self.value = ("L", leftTurn/255)
-        elif rightTurn/leftTurn > 3:
+        elif rightTurn/leftTurn > 2:
             self.value = ("R", rightTurn/255)
         elif forward > 50 and leftTurn/rightTurn < 3 and rightTurn/leftTurn < 3:
             self.value = ("F", forward/255)
