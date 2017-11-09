@@ -42,8 +42,8 @@ class Motors():
 
     def turn90_left(self, speed=0.5, dur= 1):
         self.dc = int(self.max * speed)
-        self.set_left_dir(-1)
-        self.set_right_dir(1)
+        self.set_left_dir(1)
+        self.set_right_dir(-1)
         self.set_right_dir(0)
         self.set_left_speed(self.dc)
         self.set_right_speed(self.dc)
@@ -51,8 +51,8 @@ class Motors():
 
     def turn90_right(self, speed=0.5, dur= 1):
         self.dc = int(self.max * speed)
-        self.set_left_dir(1)
-        self.set_right_dir(-1)
+        self.set_left_dir(-1)
+        self.set_right_dir(1)
         self.set_right_dir(0)
         self.set_left_speed(self.dc)
         self.set_right_speed(self.dc)
