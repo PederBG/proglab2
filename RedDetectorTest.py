@@ -59,7 +59,7 @@ class RedDetect():
             self.value = ("L", leftRed/255)
         elif rightRed >= 40 and greenRightTurn < 40 and blueRightTurn < 40:
             self.value = ("R", rightRed/255)'''
-        print("RedRatio:" ,red_ratio)
+        print("RedRatio:", red_ratio)
         if red_ratio >= 0.3:
             self.value = ("F", red_ratio)
         else:
