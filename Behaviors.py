@@ -109,22 +109,19 @@ class ApproachRed(Behavior):
         self.calculate()
 
     def calculate(self):
-        try:
-            sens_ob_values = self.sens_obs[0].get_value()
-            if sens_ob_values[0][0].get_value == "R" and sens_ob_values[0][1] > 0.6:
-                self.action_rec = [recommended("R")]
-                self.priority_weight = 0.99
-            elif sens_ob_values[0][0].get_value == "L" and sens_ob_values[0][1] > 0.6:
-                self.action_rec = [recommended("L")]
-                self.priority_weight = 0.99
-            elif sens_ob_values[0][0].get_value == "F" and sens_ob_values[0][1] > 0.6:
-                self.action_rec = [recommended("F")]
-                self.priority_weight = 0.99
-            else:
-                self.action_rec = [recommended("F")]
-                self.priority_weight = 0.1
-        except:
-            pass
+        sens_ob_values = self.sens_obs[0].get_value()
+        if sens_ob_values[0][0].get_value == "R" and sens_ob_values[0][1] > 0.6:
+            self.action_rec = [recommended("R")]
+            self.priority_weight = 0.99
+        elif sens_ob_values[0][0].get_value == "L" and sens_ob_values[0][1] > 0.6:
+            self.action_rec = [recommended("L")]
+            self.priority_weight = 0.99
+        elif sens_ob_values[0][0].get_value == "F" and sens_ob_values[0][1] > 0.6:
+            self.action_rec = [recommended("F")]
+            self.priority_weight = 0.99
+        else:
+            self.action_rec = [recommended("F")]
+            self.priority_weight = 0.1
 
     def get_name(self):
         return "ApproachRed"
