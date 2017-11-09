@@ -21,8 +21,8 @@ class RedDetect():
             for y in range(im.height):
                 if pix[x, y][0] > 150 and pix[x, y][1] < 40 and pix[x, y][2] < 40:
                     all.append(pix[x, y][0])
-                red += (pix[x, y][0]
-                green += (pix[x, y][1]
+                red += (pix[x, y][0])
+                green += (pix[x, y][1])
                 blue += (pix[x, y][2])
 
         red_ratio = len(all) / (im.height*im.width)
