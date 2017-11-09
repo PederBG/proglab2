@@ -4,7 +4,7 @@ from Sensob import LookAhead
 from Sensob import LookUnder
 from Sensob import CheckForRed
 
-def recommended(command, speed=0.25, duration=5.1):
+def recommended(command, speed=0.25, duration=2.1):
         return [command, speed, duration]
 
 look_ahead = LookAhead()
@@ -121,11 +121,15 @@ class ApproachRed(Behavior):
 
     def calculate(self):
         try:
-            if self.sens_obs[0].get_value == 1:
-                pass
-            elif self.sens_obs[0].get_value == 1:
-                pass
-            else:
+            sens_ob_values = self.sens_obs[0].get_value()
+            if sens_ob_values[0][0].get_value == "R" and sens_ob_values[0][1] > 0.6:
+                self.action_rec = recommended("R")
+                self.priority_weight = 0.9
+            elif sens_ob_values[0][0].get_value == "L" and sens_ob_values[0][1] > 0.6:
+                self.action_rec = recommended("L")
+                self.priority_weight = 0.9
+            elif sens_ob_values[0][0].get_value == "F" and sens_ob_values[0][1] > 0.6:
+                self.action_rec = recommended("F")
                 pass
         except:
             pass
