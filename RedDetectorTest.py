@@ -10,7 +10,7 @@ class RedDetect():
 
     def turnVal(self): #Returnerer hoyre r-value / venstre r-value
         cam = Camera()
-        im = Image.open(cam.update())
+        im = cam.update()
         pix = im.load()
         left = []
         right = []
@@ -21,17 +21,20 @@ class RedDetect():
         greenLeft = []
         blueRight = []
         greenRight = []
-        """left = im.crop((0, 0, im.width // 2, im.height))
+        '''left = im.crop((0, 0, im.width // 2, im.height))
         right = im.crop((im.width // 2, 0, im.width, im.height))
 
         leftTurn = np.asarray(left.getdata(0), dtype=np.int, order="C")
-        rightTurn = np.asarray(right.getdata(0), dtype=np.int, order="C")"""
+        rightTurn = np.asarray(right.getdata(0), dtype=np.int, order="C")
         for x in range(0,im.width//2):
             for y in range(im.height):
                 left.append(pix[x, y][0])
                 blueLeft.append(pix[x, y][2])
                 greenLeft.append(pix[x, y][1])
         leftRed = sum(left) // len(left)
+        greenLeftTurn = sum(greenLeft) // len(greenLeft)
+        blueLeftTurn = sum(blueLeft) // len(blueLeft)
+
 
         for x in range(im.width//2, im.width):
             for y in range(im.height):
@@ -39,20 +42,26 @@ class RedDetect():
                 greenRight.append(pix[x, y][1])
                 blueRight.append(pix[x, y][2])
         rightRed = sum(right) // len(right)
+        greenRightTurn = sum(greenRight) // len(greenRight)
+        blueRightTurn = sum(blueRight) // len(blueRight)'''
 
         for x in range(im.width):
             for y in range(im.height):
-                all.append(pix[x, y][0])
-                greenAll.append(pix[x, y][1])
-                blueAll.append(pix[x, y][2])
-        forward = sum(all) // len(all)
+                if pix[x, y][0] > 150 and pix[x, y][1] < 40 and pix[x, y][2] < 40:
+                    all.append(pix[x, y][0])
+                #greenAll.append(pix[x, y][1])
+                #blueAll.append(pix[x, y][2])
+        red_ratio = len(all) / (im.height*im.width)
+        #blueForward = sum(blueAll) // len(blueAll)
+        #greenForward = sum(greenAll) // len(greenAll)
 
-        if leftRed >= 40 and greenLeft < 40 and blueLeft < 40:
+        '''if leftRed >= 40 and greenLeftTurn < 40 and blueLeftTurn < 40:
             self.value = ("L", leftRed/255)
-        elif rightRed >= 40 and greenRight < 40 and blueRight < 40:
-            self.value = ("R", rightRed/255)
-        elif forward >= 50 and greenAll < 50 and blueAll < 50:
-            self.value = ("F", forward/255)
+        elif rightRed >= 40 and greenRightTurn < 40 and blueRightTurn < 40:
+            self.value = ("R", rightRed/255)'''
+        print("RedRatio:" ,red_ratio)
+        if red_ratio >= 0.3:
+            self.value = ("F", red_ratio)
         else:
             self.value = ("F", 0.0)
 
