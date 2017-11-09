@@ -17,7 +17,7 @@ class Arbitrator():
 
     def choose_action(self):
         self.update()
-        print("Dictionary with behaviors" + self.behaviors)
+        print("Dictionary with behaviors" + str(self.behaviors))
         sorted_behaviors = sorted(self.behaviors.items(), key=operator.itemgetter(1))
         name = sorted_behaviors[-1][0]
         for behavior in self.active_behaviors:
