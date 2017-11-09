@@ -40,7 +40,6 @@ class CheckForRed(Sensob):
     def get_value(self):
         return self.sensor.get_value() # returnerer hoyre side / venstre side
 
-
 class LookUnder(Sensob):
 
     def __init__(self):

@@ -3,7 +3,6 @@ from time import sleep
 import RPi.GPIO as GPIO
 import wiringpi2 as wp
 
-
 class Motors():
     def __init__(self):
         self.setup()
@@ -32,6 +31,13 @@ class Motors():
     # speed, with negative values indicating that the wheel will spin in reverse. The argument "dur" (duration)
     # is the time (in seconds) that the action will persist.
 
+    def turn180(self, speed = 0.25, dur = None):
+        self.dc = int(self.max * speed)
+        self.set_left_dir(1)
+        self.set_right_dir(0)
+        self.set_left_speed(self.dc)
+        self.set_right_speed(self.dc)
+        self.persist(dur)
 
     def forward(self, speed=0.25, dur=None):
         self.dc = int(self.max * speed)

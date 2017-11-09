@@ -93,7 +93,7 @@ class DetectEdge(Behavior):
                 self.action_rec = recommended("L")
             elif sum(light_values) > 2:
                 self.priority_weight = 1
-                self.action_rec = recommended(left_or_rigth[random.randint(0,1)])
+                self.action_rec = recommended("T")
             else:
                 self.priority_weight = 0.2
                 self.action_rec = recommended("F")
@@ -121,6 +121,7 @@ class ApproachRed(Behavior):
 
     def calculate(self):
         try:
+            tuple = self.sens_obs[0].get_value()
             if self.sens_obs[0].get_value == 1:
                 pass
             elif self.sens_obs[0].get_value == 1:
@@ -129,8 +130,6 @@ class ApproachRed(Behavior):
                 pass
         except:
             pass
-
-
 
     def get_name(self):
         return "ApproachRed"
