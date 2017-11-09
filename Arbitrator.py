@@ -21,6 +21,7 @@ class Arbitrator():
         name = sorted_behaviors[-1][0]
         for behavior in self.active_behaviors:
             if behavior.get_name() == name:
+                print(behavior.get_name())
                 return behavior.get_action_rec()
 
     def add_active_behavior(self, behavior):
