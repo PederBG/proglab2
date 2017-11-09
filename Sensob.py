@@ -35,10 +35,10 @@ class CheckForRed(Sensob):
 
     def update(self):
         self.sensor.update()
-        self.value = self.sensor.update()
+        self.value = self.sensor.get_value()
 
     def get_value(self):
-        return self.sensor.get_value() # returnerer hoyre side / venstre side
+        return self.value # returnerer hoyre side / venstre side
 
 class LookUnder(Sensob):
 
