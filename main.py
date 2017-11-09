@@ -14,13 +14,14 @@ approach_red = ApproachRed()
 
 bbcon.set_arbitrator(arbitrator)
 bbcon.set_motob(motob)
-    
+
 bbcon.add_behavior(approach)
 bbcon.add_behavior(detect_edge)
 bbcon.add_behavior(approach_red)
 
 bbcon.add_active_behavior(approach_red)
-
+bbcon.add_active_behavior(detect_edge)
+bbcon.add_active_behavior(approach)
 
 ZumoButton().wait_for_press()
 while(True):
