@@ -44,9 +44,9 @@ class Approach(Behavior):
         self.calculate()
 
     def calculate(self):
-        left_or_right = ["L", "R"]
+        
         distance = self.sens_obs[0].get_value()
-        print(distance)
+        print("Distance to object", distance)
         if distance < 10:
             self.priority_weight = 0.99
             self.action_rec = recommended("T",0.5,2)
