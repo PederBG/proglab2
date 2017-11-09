@@ -4,7 +4,7 @@ from Sensob import LookAhead
 from Sensob import LookUnder
 from Sensob import CheckForRed
 
-def recommended(command, speed=0.25, duration=0):
+def recommended(command, speed=0.1, duration=0):
         return [command, speed, duration]
 
 look_ahead = LookAhead()
