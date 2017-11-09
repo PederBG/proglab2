@@ -74,21 +74,21 @@ class DetectEdge(Behavior):
     #Denne funksjonen er jallaballa
     def calculate(self):
         light_values = self.sens_obs[0].get_value()
-        try:
-            if sum(light_values) < 1.2:
+
+        if sum(light_values) < 1.2:
                 self.priority_weight = 1
                 self.action_rec = recommended("T")
-            elif sum(light_values[0]) < 0.2:
+        elif sum(light_values[0]) < 0.2:
                 self.priority_weight = 1
                 self.action_rec = recommended("TR")
-            elif sum(light_values[5]) < 0.2:
+        elif sum(light_values[5]) < 0.2:
                 self.priority_weight = 1
                 self.action_rec = recommended("TL")
-            else:
+        else:
                 self.priority_weight = 0.2
                 self.action_rec = recommended("F")
-        except:
-            print("Calculate crashed, buhuuuuu :'( livet suger")
+
+
 
     def get_name(self):
         return "DetectEdge"
