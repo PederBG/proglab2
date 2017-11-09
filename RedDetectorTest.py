@@ -27,7 +27,7 @@ class RedDetect():
 
         red_ratio = len(all) / (im.height*im.width)
 
-        print("RedRatio:", red_ratio, "RGB:", red / (im.height*im.width), green / (im.height*im.width), blue / (im.height*im.width))
+        print("RedRatio:", red_ratio, "RGB:", int(red / (im.height*im.width)), int(green / (im.height*im.width)), int(blue / (im.height*im.width)))
 
         if red_ratio >= 0.3:
             self.value = ("F", red_ratio)

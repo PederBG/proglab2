@@ -110,15 +110,8 @@ class ApproachRed(Behavior):
 
     def calculate(self):
         sens_ob_values = self.sens_obs[0].get_value()
-        print("Camera Values: ", sens_ob_values)
-        if sens_ob_values[0] == "R" and sens_ob_values[1] > 0.4:
-            self.action_rec = [recommended("R")]
-            self.priority_weight = 0.99
-        elif sens_ob_values[0] == "L" and sens_ob_values[1] > 0.4:
-            self.action_rec = [recommended("L")]
-            self.priority_weight = 0.99
-        elif sens_ob_values[0] == "F" and sens_ob_values[1] > 0.4:
-            self.action_rec = [recommended("F")]
+        if sens_ob_values[0] == "F" and sens_ob_values[1] > 0.05:
+            self.action_rec = [recommended("F", 0.25)]
             self.priority_weight = 0.99
         else:
             self.action_rec = [recommended("F")]
