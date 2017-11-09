@@ -4,7 +4,7 @@ from Sensob import LookAhead
 from Sensob import LookUnder
 from Sensob import CheckForRed
 
-def recommended(command, speed=0.25, duration=2.1):
+def recommended(command, speed=0.25, duration=0):
         return [command, speed, duration]
 
 look_ahead = LookAhead()
@@ -47,12 +47,13 @@ class Approach(Behavior):
     def calculate(self):
         left_or_right = ["L", "R"]
         distance = self.sens_obs[0].get_value()
+        print(distance)
         if distance < 10:
             self.priority_weight = 1
             self.action_rec = recommended("T")
         else:
             self.priority_weight = self.set_priority_weight()
-            self.action_rec = recommended("F")
+            self.action_rec = recommended("F",0.25,2)
 
     def get_name(self):
         return "Approach"
