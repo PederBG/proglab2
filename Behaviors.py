@@ -4,11 +4,10 @@ from Sensob import LookAhead
 from Sensob import LookUnder
 from Sensob import CheckForRed
 
-def recommended(command, speed=0.25, duration=0):
+def recommended(command, speed=0.15, duration=0):
         return [command, speed, duration]
 
 look_ahead = LookAhead()
-is_red = CheckForRed()
 look_under = LookUnder()
 check_for_red = CheckForRed()
 
@@ -45,15 +44,13 @@ class Approach(Behavior):
         self.calculate()
 
     def calculate(self):
-        left_or_right = ["L", "R"]
         distance = self.sens_obs[0].get_value()
-        print(distance)
         if distance < 10:
-            self.priority_weight = 1
-            self.action_rec = recommended("T")
+            self.priority_weight = 0.99
+            self.action_rec = [recommended("T", 0.5, 1.8)]
         else:
-            self.priority_weight = self.set_priority_weight()
-            self.action_rec = recommended("F",0.25,2)
+            self.priority_weight = 0.5
+            self.action_rec = [recommended("F")]
 
     def get_name(self):
         return "Approach"
@@ -63,13 +60,6 @@ class Approach(Behavior):
 
     def get_priority_weight(self):
         return self.priority_weight
-
-    def set_priority_weight(self):
-        dist = self.sens_obs[0].get_value()
-        if dist > 100:
-            return 1
-        else:
-            return dist / 100
 
 class DetectEdge(Behavior):
     def __init__(self):
@@ -84,21 +74,20 @@ class DetectEdge(Behavior):
     #Denne funksjonen er jallaballa
     def calculate(self):
         light_values = self.sens_obs[0].get_value()
-        try:
-            if sum(light_values[0,2]) > 2:
-                self.priority_weight = 1
-                self.action_rec = recommended("R")
-            elif sum(light_values[3:5]) > 2:
-                self.priority_weight = 1
-                self.action_rec = recommended("L")
-            elif sum(light_values) > 2:
-                self.priority_weight = 1
-                self.action_rec = recommended("T")
-            else:
-                self.priority_weight = 0.2
-                self.action_rec = recommended("F")
-        except:
-            print("Calculate crashed")
+
+        if sum(light_values) < 1.4:
+            self.priority_weight = 1
+            self.action_rec = [recommended("B", 0.15, 1.5), recommended("T",0.5, 1.8)]
+        elif light_values[0] < 0.3:
+            self.priority_weight = 1
+            self.action_rec = [recommended("B", 0.15, 1.5), recommended("TR",0.5,0.9)]
+        elif light_values[5] < 0.3:
+            self.priority_weight = 1
+            self.action_rec = [recommended("B", 0.15, 1.5), recommended("TL",0.5,0.9)]
+        else:
+            self.priority_weight = 0.2
+            self.action_rec = [recommended("F")]
+
 
     def get_name(self):
         return "DetectEdge"
@@ -107,8 +96,7 @@ class DetectEdge(Behavior):
         return self.action_rec
 
     def get_priority_weight(self):
-        #return self.priority_weight
-        return 1
+        return self.priority_weight
 
 class ApproachRed(Behavior):
     def __init__(self):
