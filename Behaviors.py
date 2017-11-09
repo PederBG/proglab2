@@ -63,7 +63,6 @@ class Approach(Behavior):
     def get_priority_weight(self):
         return self.priority_weight
 
-
 class DetectEdge(Behavior):
     def __init__(self):
         super().__init__()
@@ -91,7 +90,7 @@ class DetectEdge(Behavior):
                 self.priority_weight = 0.2
                 self.action_rec = recommended("F")
         except:
-            print("Calculate crashed")
+            print("Calculate crashed, buhuuuuu :'( livet suger")
 
     def get_name(self):
         return "DetectEdge"
@@ -101,7 +100,6 @@ class DetectEdge(Behavior):
 
     def get_priority_weight(self):
         return self.priority_weight
-
 
 class ApproachRed(Behavior):
     def __init__(self):
