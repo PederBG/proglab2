@@ -19,7 +19,7 @@ class RedDetect():
 
         for x in range(im.width):
             for y in range(im.height):
-                if pix[x, y][0] > 160 and pix[x, y][1] < 100 and pix[x, y][2] < 100:
+                if pix[x, y][0] > 160 and pix[x, y][1] < 120 and pix[x, y][2] < 100:
                     all.append(pix[x, y][0])
                 red += (pix[x, y][0])
                 green += (pix[x, y][1])
