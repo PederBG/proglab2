@@ -47,10 +47,10 @@ class Approach(Behavior):
         distance = self.sens_obs[0].get_value()
         if distance < 10:
             self.priority_weight = 0.99
-            self.action_rec = recommended("T",0.5,1.8)
+            self.action_rec = [recommended("T",0.5,1.8)]
         else:
             self.priority_weight = 0.5
-            self.action_rec = recommended("F")
+            self.action_rec = [recommended("F")]
 
     def get_name(self):
         return "Approach"
@@ -77,16 +77,16 @@ class DetectEdge(Behavior):
 
         if sum(light_values) < 1.4:
                 self.priority_weight = 1
-                self.action_rec = recommended("T",0.5, 1.8)
+                self.action_rec = [recommended("B", 0.15, 0.5), recommended("T",0.5, 1.8)]
         elif light_values[0] < 0.3:
                 self.priority_weight = 1
-                self.action_rec = recommended("TR",0.5,0.9)
+                self.action_rec = [recommended("B", 0.15, 0.5), recommended("TR",0.5,0.9)]
         elif light_values[5] < 0.3:
                 self.priority_weight = 1
-                self.action_rec = recommended("TL",0.5,0.9)
+                self.action_rec = [recommended("B", 0.15, 0.5), recommended("TL",0.5,0.9)]
         else:
                 self.priority_weight = 0.2
-                self.action_rec = recommended("F")
+                self.action_rec = [recommended("F")]
 
 
     def get_name(self):
