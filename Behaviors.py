@@ -8,7 +8,6 @@ def recommended(command, speed=0.1, duration=0):
         return [command, speed, duration]
 
 look_ahead = LookAhead()
-is_red = CheckForRed()
 look_under = LookUnder()
 check_for_red = CheckForRed()
 
