@@ -29,10 +29,7 @@ class RedDetect():
 
         print("RedRatio:", red_ratio, "RGB:", int(red / (im.height*im.width)), int(green / (im.height*im.width)), int(blue / (im.height*im.width)))
 
-        if red_ratio >= 0.3:
-            self.value = ("F", red_ratio)
-        else:
-            self.value = ("F", 0.0)
+        self.value = ("F", red_ratio)
 
     def update(self):
         self.turnVal()
