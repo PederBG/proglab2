@@ -75,13 +75,13 @@ class DetectEdge(Behavior):
     def calculate(self):
         light_values = self.sens_obs[0].get_value()
 
-        if sum(light_values) < 1.2:
+        if sum(light_values) < 1.4:
                 self.priority_weight = 1
                 self.action_rec = recommended("T",0.5, 1.8)
-        elif light_values[0] < 0.2:
+        elif light_values[0] < 0.3:
                 self.priority_weight = 1
                 self.action_rec = recommended("TR",0.5,0.9)
-        elif light_values[5] < 0.2:
+        elif light_values[5] < 0.3:
                 self.priority_weight = 1
                 self.action_rec = recommended("TL",0.5,0.9)
         else:
