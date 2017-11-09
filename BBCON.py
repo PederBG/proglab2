@@ -33,7 +33,7 @@ class BBCON():
         motor_recommendation = self.arbitrator.choose_action()
         print("Active motor recommendation: " , motor_recommendation)
         for x in range(0, len(motor_recommendation)):
-            self.update_motob(motor_recommendation)
+            self.update_motob(motor_recommendation[x])
 
     def update_motob(self, motor_recommendation): #
         self.motob.apply_motor_recommendation(motor_recommendation)
