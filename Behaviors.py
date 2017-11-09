@@ -46,8 +46,8 @@ class Approach(Behavior):
     def calculate(self):
         distance = self.sens_obs[0].get_value()
         if distance < 10:
-            self.priority_weight = 0.99
-            self.action_rec = [recommended("T", 0.5, 1.8)]
+            self.priority_weight = 0.98
+            self.action_rec = [recommended("T", 0.5, 1.6)]
         else:
             self.priority_weight = 0.5
             self.action_rec = [recommended("F")]
@@ -75,15 +75,15 @@ class DetectEdge(Behavior):
     def calculate(self):
         light_values = self.sens_obs[0].get_value()
 
-        if sum(light_values) < 1.4:
+        if sum(light_values) < 2.2:
             self.priority_weight = 1
-            self.action_rec = [recommended("B", 0.15, 1.5), recommended("T",0.5, 1.8)]
+            self.action_rec = [recommended("B", 0.15, 1.5), recommended("T",0.5, 1.6)]
         elif light_values[0] < 0.3:
             self.priority_weight = 1
-            self.action_rec = [recommended("B", 0.15, 1.5), recommended("TR",0.5,0.9)]
+            self.action_rec = [recommended("B", 0.15, 1.5), recommended("TR",0.5,0.8)]
         elif light_values[5] < 0.3:
             self.priority_weight = 1
-            self.action_rec = [recommended("B", 0.15, 1.5), recommended("TL",0.5,0.9)]
+            self.action_rec = [recommended("B", 0.15, 1.5), recommended("TL",0.5,0.8)]
         else:
             self.priority_weight = 0.2
             self.action_rec = [recommended("F")]
@@ -109,22 +109,20 @@ class ApproachRed(Behavior):
         self.calculate()
 
     def calculate(self):
-        try:
-            sens_ob_values = self.sens_obs[0].get_value()
-            if sens_ob_values[0][0].get_value == "R" and sens_ob_values[0][1] > 0.6:
-                self.action_rec = recommended("R")
-                self.priority_weight = 0.9
-            elif sens_ob_values[0][0].get_value == "L" and sens_ob_values[0][1] > 0.6:
-                self.action_rec = recommended("L")
-                self.priority_weight = 0.9
-            elif sens_ob_values[0][0].get_value == "F" and sens_ob_values[0][1] > 0.6:
-                self.action_rec = recommended("F")
-                self.priority_weight = 0.9
-            else:
-                self.action_rec = recommended("F")
-                self.priority_weight = 0.5
-        except:
-            pass
+        sens_ob_values = self.sens_obs[0].get_value()
+        print("Camera Values: ", sens_ob_values)
+        if sens_ob_values[0] == "R" and sens_ob_values[1] > 0.4:
+            self.action_rec = [recommended("R")]
+            self.priority_weight = 0.99
+        elif sens_ob_values[0] == "L" and sens_ob_values[1] > 0.4:
+            self.action_rec = [recommended("L")]
+            self.priority_weight = 0.99
+        elif sens_ob_values[0] == "F" and sens_ob_values[1] > 0.4:
+            self.action_rec = [recommended("F")]
+            self.priority_weight = 0.99
+        else:
+            self.action_rec = [recommended("F")]
+            self.priority_weight = 0.1
 
     def get_name(self):
         return "ApproachRed"
