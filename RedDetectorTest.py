@@ -9,8 +9,8 @@ class RedDetect():
         self.value = ("F",0.0)
 
     def turnVal(self): #Returnerer hoyre r-value / venstre r-value
-        cam = Camera.update()
-        im = Image.open(cam)
+        cam = Camera()
+        im = Image.open(cam.update())
         pix = im.load()
         left = []
         right = []
