@@ -12,8 +12,8 @@ class Motob:
         elif(motor_recommendation[0] == 'F'):
             self.motors.forward(motor_recommendation[1], motor_recommendation[2])
         elif(motor_recommendation[0] == 'T'):
-            self.motors.turn180()
+            self.motors.turn180(motor_recommendation[1], motor_recommendation[2])
         elif(motor_recommendation[0] == 'TL'):
-            self.motors.turn90_left()
+            self.motors.turn90_left(motor_recommendation[1], motor_recommendation[2])
         elif(motor_recommendation[0] == 'TR'):
-            self.motors.turn90_right()
+            self.motors.turn90_right(motor_recommendation[1], motor_recommendation[2])
