@@ -46,7 +46,7 @@ class Approach(Behavior):
     def calculate(self):
         distance = self.sens_obs[0].get_value()
         if distance < 10:
-            self.priority_weight = 0.99
+            self.priority_weight = 0.98
             self.action_rec = [recommended("T", 0.5, 1.6)]
         else:
             self.priority_weight = 0.5
@@ -112,17 +112,17 @@ class ApproachRed(Behavior):
         try:
             sens_ob_values = self.sens_obs[0].get_value()
             if sens_ob_values[0][0].get_value == "R" and sens_ob_values[0][1] > 0.6:
-                self.action_rec = recommended("R")
-                self.priority_weight = 0.9
+                self.action_rec = [recommended("R")]
+                self.priority_weight = 0.99
             elif sens_ob_values[0][0].get_value == "L" and sens_ob_values[0][1] > 0.6:
-                self.action_rec = recommended("L")
-                self.priority_weight = 0.9
+                self.action_rec = [recommended("L")]
+                self.priority_weight = 0.99
             elif sens_ob_values[0][0].get_value == "F" and sens_ob_values[0][1] > 0.6:
-                self.action_rec = recommended("F")
-                self.priority_weight = 0.9
+                self.action_rec = [recommended("F")]
+                self.priority_weight = 0.99
             else:
-                self.action_rec = recommended("F")
-                self.priority_weight = 0.5
+                self.action_rec = [recommended("F")]
+                self.priority_weight = 0.1
         except:
             pass
 
