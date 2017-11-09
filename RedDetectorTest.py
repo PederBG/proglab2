@@ -15,12 +15,6 @@ class RedDetect():
         left = []
         right = []
         all = []
-        blueAll = []
-        greenAll = []
-        blueLeft = []
-        greenLeft = []
-        blueRight = []
-        greenRight = []
         '''left = im.crop((0, 0, im.width // 2, im.height))
         right = im.crop((im.width // 2, 0, im.width, im.height))
 
