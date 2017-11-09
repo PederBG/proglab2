@@ -31,7 +31,7 @@ class Motors():
     # speed, with negative values indicating that the wheel will spin in reverse. The argument "dur" (duration)
     # is the time (in seconds) that the action will persist.
 
-    def turn180(self, speed=0.25, dur=None):
+    def turn180(self, speed=0.5, dur=2):
         self.dc = int(self.max * speed)
         self.set_left_dir(1)
         self.set_right_dir(-1)
@@ -39,6 +39,25 @@ class Motors():
         self.set_left_speed(self.dc)
         self.set_right_speed(self.dc)
         self.persist(dur)
+
+    def turn90_left(self, speed=0.5, dur= 1):
+        self.dc = int(self.max * speed)
+        self.set_left_dir(-1)
+        self.set_right_dir(1)
+        self.set_right_dir(0)
+        self.set_left_speed(self.dc)
+        self.set_right_speed(self.dc)
+        self.persist(dur)
+
+    def turn90_right(self, speed=0.5, dur= 1):
+        self.dc = int(self.max * speed)
+        self.set_left_dir(1)
+        self.set_right_dir(-1)
+        self.set_right_dir(0)
+        self.set_left_speed(self.dc)
+        self.set_right_speed(self.dc)
+        self.persist(dur)
+
 
     def forward(self, speed=0.25, dur=None):
         self.dc = int(self.max * speed)
