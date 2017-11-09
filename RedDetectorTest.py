@@ -12,48 +12,23 @@ class RedDetect():
         cam = Camera()
         im = cam.update()
         pix = im.load()
-        left = []
-        right = []
         all = []
-        '''left = im.crop((0, 0, im.width // 2, im.height))
-        right = im.crop((im.width // 2, 0, im.width, im.height))
-
-        leftTurn = np.asarray(left.getdata(0), dtype=np.int, order="C")
-        rightTurn = np.asarray(right.getdata(0), dtype=np.int, order="C")
-        for x in range(0,im.width//2):
-            for y in range(im.height):
-                left.append(pix[x, y][0])
-                blueLeft.append(pix[x, y][2])
-                greenLeft.append(pix[x, y][1])
-        leftRed = sum(left) // len(left)
-        greenLeftTurn = sum(greenLeft) // len(greenLeft)
-        blueLeftTurn = sum(blueLeft) // len(blueLeft)
-
-
-        for x in range(im.width//2, im.width):
-            for y in range(im.height):
-                right.append(pix[x, y][0])
-                greenRight.append(pix[x, y][1])
-                blueRight.append(pix[x, y][2])
-        rightRed = sum(right) // len(right)
-        greenRightTurn = sum(greenRight) // len(greenRight)
-        blueRightTurn = sum(blueRight) // len(blueRight)'''
+        red = 0
+        green = 0
+        blue = 0
 
         for x in range(im.width):
             for y in range(im.height):
                 if pix[x, y][0] > 150 and pix[x, y][1] < 40 and pix[x, y][2] < 40:
                     all.append(pix[x, y][0])
-                #greenAll.append(pix[x, y][1])
-                #blueAll.append(pix[x, y][2])
-        red_ratio = len(all) / (im.height*im.width)
-        #blueForward = sum(blueAll) // len(blueAll)
-        #greenForward = sum(greenAll) // len(greenAll)
+                red += (pix[x, y][0]
+                green += (pix[x, y][1]
+                blue += (pix[x, y][2])
 
-        '''if leftRed >= 40 and greenLeftTurn < 40 and blueLeftTurn < 40:
-            self.value = ("L", leftRed/255)
-        elif rightRed >= 40 and greenRightTurn < 40 and blueRightTurn < 40:
-            self.value = ("R", rightRed/255)'''
-        print("RedRatio:", red_ratio)
+        red_ratio = len(all) / (im.height*im.width)
+
+        print("RedRatio:", red_ratio, "RGB:", red / (im.height*im.width), green / (im.height*im.width), blue / (im.height*im.width))
+
         if red_ratio >= 0.3:
             self.value = ("F", red_ratio)
         else:
