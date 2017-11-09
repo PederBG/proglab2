@@ -130,7 +130,10 @@ class ApproachRed(Behavior):
                 self.priority_weight = 0.9
             elif sens_ob_values[0][0].get_value == "F" and sens_ob_values[0][1] > 0.6:
                 self.action_rec = recommended("F")
-                pass
+                self.priority_weight = 0.9
+            else:
+                self.action_rec = recommended("F")
+                self.priority_weight = 0.5
         except:
             pass
 
