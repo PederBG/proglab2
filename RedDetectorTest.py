@@ -39,7 +39,7 @@ class RedDetect():
             self.value = ("L", leftTurn/255)
         elif rightTurn/leftTurn > 3:
             self.value = ("R", rightTurn/255)
-        else:
+        elif forward > 50:
             self.value = ("F", forward/255)
 
     def update(self):
