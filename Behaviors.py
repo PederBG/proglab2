@@ -80,14 +80,13 @@ class DetectEdge(Behavior):
                 self.action_rec = recommended("T")
         elif sum(light_values[0]) < 0.2:
                 self.priority_weight = 1
-                self.action_rec = recommended("TR")
+                self.action_rec = recommended("TR",0.5,1)
         elif sum(light_values[5]) < 0.2:
                 self.priority_weight = 1
-                self.action_rec = recommended("TL")
+                self.action_rec = recommended("TL",0.5,1)
         else:
                 self.priority_weight = 0.2
                 self.action_rec = recommended("F")
-
 
 
     def get_name(self):
