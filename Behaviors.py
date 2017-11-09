@@ -4,7 +4,7 @@ from Sensob import LookAhead
 from Sensob import LookUnder
 from Sensob import CheckForRed
 
-def recommended(command, speed=0.1, duration=0):
+def recommended(command, speed=0.2, duration=0):
         return [command, speed, duration]
 
 look_ahead = LookAhead()
@@ -82,10 +82,10 @@ class DetectEdge(Behavior):
                 self.action_rec = recommended("T",0.5,2)
             elif sum(light_values[0:2]) < 0.4:
                 self.priority_weight = 1
-                self.action_rec = recommended("R",0.5,1)
+                self.action_rec = recommended("R",0.5,2)
             elif sum(light_values[4:]) < 0.4:
                 self.priority_weight = 1
-                self.action_rec = recommended("L",0.5,1)
+                self.action_rec = recommended("L",0.5,2)
             else:
                 self.priority_weight = 0.2
                 self.action_rec = recommended("F")
