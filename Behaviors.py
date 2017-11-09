@@ -51,7 +51,7 @@ class Approach(Behavior):
             self.priority_weight = 0.99
             self.action_rec = recommended("T",0.5,2)
         else:
-            self.priority_weight = self.set_priority_weight()
+            self.priority_weight = 0.5
             self.action_rec = recommended("F")
 
     def get_name(self):
@@ -63,12 +63,6 @@ class Approach(Behavior):
     def get_priority_weight(self):
         return self.priority_weight
 
-    def set_priority_weight(self):
-        dist = self.sens_obs[0].get_value()
-        if dist > 100:
-            return 1
-        else:
-            return dist / 100
 
 class DetectEdge(Behavior):
     def __init__(self):
@@ -106,8 +100,8 @@ class DetectEdge(Behavior):
         return self.action_rec
 
     def get_priority_weight(self):
-        #return self.priority_weight
-        return 1
+        return self.priority_weight
+
 
 class ApproachRed(Behavior):
     def __init__(self):
