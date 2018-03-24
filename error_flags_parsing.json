@@ -1,0 +1,3132 @@
+{
+  "0x010": {
+    "Simian_dataLogger_playback_Ia": {
+      "type": "Int",
+      "startbyte": 1,
+      "length": 2,
+      "factor": 0.01
+    },
+    "Simian_dataLogger_playback_Ib": {
+      "type": "Int",
+      "startbyte": 3,
+      "length": 2,
+      "factor": 0.01
+    }
+  },
+  "0x011": {
+    "Simian_dataLogger_playback_Id": {
+      "type": "Int",
+      "startbyte": 1,
+      "length": 2,
+      "factor": 0.01
+    },
+    "Simian_dataLogger_playback_Iq": {
+      "type": "Int",
+      "startbyte": 3,
+      "length": 2,
+      "factor": 0.01
+    },
+    "Simian_dataLogger_playback_rpm": {
+      "type": "Int",
+      "startbyte": 5,
+      "length": 2,
+      "factor": 1.0
+    }
+  },
+  "0x012": {
+    "Simian_dataLogger_playback_encoder_pos": {
+      "type": "Uint",
+      "startbyte": 1,
+      "length": 4,
+      "factor": 1.0
+    }
+  },
+  "0x013": {
+    "Simian_dataLogger_playback_encoder_raw": {
+      "type": "Uint",
+      "startbyte": 1,
+      "length": 4,
+      "factor": 1.0
+    }
+  },
+  "0x185": {
+    "AMK_FL_Setpoint_control_word": {
+      "type": "Uint",
+      "startbyte": 1,
+      "length": 1,
+      "factor": 1.0
+    },
+    "AMK_FL_Setpoint_RPM_request": {
+      "type": "Int",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 1.0
+    },
+    "AMK_FL_Setpoint_positive_torque_limit": {
+      "type": "Int",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.0098
+    },
+    "AMK_FL_Setpoint_negative_torque_limit": {
+      "type": "Int",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.0098
+    }
+  },
+  "0x186": {
+    "AMK_FR_Setpoint_control_word": {
+      "type": "Uint",
+      "startbyte": 1,
+      "length": 1,
+      "factor": 1.0
+    },
+    "AMK_FR_Setpoint_RPM_request": {
+      "type": "Int",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 1.0
+    },
+    "AMK_FR_Setpoint_positive_torque_limit": {
+      "type": "Int",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.0098
+    },
+    "AMK_FR_Setpoint_negative_torque_limit": {
+      "type": "Int",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.0098
+    }
+  },
+  "0x189": {
+    "AMK_RL_Setpoint_control_word": {
+      "type": "Uint",
+      "startbyte": 1,
+      "length": 1,
+      "factor": 1.0
+    },
+    "AMK_RL_Setpoint_RPM_request": {
+      "type": "Int",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 1.0
+    },
+    "AMK_RL_Setpoint_positive_torque_limit": {
+      "type": "Int",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.0098
+    },
+    "AMK_RL_Setpoint_negative_torque_limit": {
+      "type": "Int",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.0098
+    }
+  },
+  "0x18A": {
+    "AMK_RR_Setpoint_control_word": {
+      "type": "Uint",
+      "startbyte": 1,
+      "length": 1,
+      "factor": 1.0
+    },
+    "AMK_RR_Setpoint_RPM_request": {
+      "type": "Int",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 1.0
+    },
+    "AMK_RR_Setpoint_positive_torque_limit": {
+      "type": "Int",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.0098
+    },
+    "AMK_RR_Setpoint_negative_torque_limit": {
+      "type": "Int",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.0098
+    }
+  },
+  "0x200": {
+    "Simian_current_a": {
+      "type": "Int",
+      "startbyte": 1,
+      "length": 2,
+      "factor": 0.1
+    },
+    "Simian_current_b": {
+      "type": "Int",
+      "startbyte": 3,
+      "length": 2,
+      "factor": 0.1
+    },
+    "Simian_current_d": {
+      "type": "Int",
+      "startbyte": 5,
+      "length": 2,
+      "factor": 0.1
+    },
+    "Simian_current_q": {
+      "type": "Int",
+      "startbyte": 7,
+      "length": 2,
+      "factor": 0.1
+    }
+  },
+  "0x201": {
+    "Simian_current_dc": {
+      "type": "Int",
+      "startbyte": 1,
+      "length": 2,
+      "factor": 0.1
+    },
+    "Simian_voltage_dc": {
+      "type": "Int",
+      "startbyte": 3,
+      "length": 2,
+      "factor": 0.1
+    }
+  },
+  "0x202": {
+    "Simian_speed_rpm": {
+      "type": "Int",
+      "startbyte": 1,
+      "length": 2,
+      "factor": 1.0
+    },
+    "Simian_speed_max_rpm": {
+      "type": "Int",
+      "startbyte": 3,
+      "length": 2,
+      "factor": 1.0
+    },
+    "Simian_speed_min_rpm": {
+      "type": "Int",
+      "startbyte": 5,
+      "length": 2,
+      "factor": 1.0
+    }
+  },
+  "0x203": {
+    "Simian_current_a_rms": {
+      "type": "Int",
+      "startbyte": 1,
+      "length": 2,
+      "factor": 0.1
+    },
+    "Simian_current_b_rms": {
+      "type": "Int",
+      "startbyte": 3,
+      "length": 2,
+      "factor": 0.1
+    }
+  },
+  "0x284": {
+    "AMK_FL_Status_": {
+      "type": "Uint",
+      "startbyte": 1,
+      "length": 1,
+      "factor": 1.0
+    },
+    "AMK_FL_Actual_velocity": {
+      "type": "Int",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 1.0
+    },
+    "AMK_FL_Torque_current": {
+      "type": "Int",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 6.54296875
+    },
+    "AMK_FL_Magnetizing_current": {
+      "type": "Int",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 6.54296875
+    }
+  },
+  "0x285": {
+    "AMK_FR_Status": {
+      "type": "Uint",
+      "startbyte": 1,
+      "length": 1,
+      "factor": 1.0
+    },
+    "AMK_FR_Actual_velocity": {
+      "type": "Int",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 1.0
+    },
+    "AMK_FR_Torque_current": {
+      "type": "Int",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 6.54296875
+    },
+    "AMK_FR_Magnetizing_current": {
+      "type": "Int",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 6.54296875
+    }
+  },
+  "0x286": {
+    "AMK_FL_Temp_Motor": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.1
+    },
+    "AMK_FL_Temp_Inverter": {
+      "type": "Int",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.1
+    },
+    "AMK_FL_Error_Info": {
+      "type": "Int",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 1.0
+    },
+    "AMK_FL_Temp_IGBT": {
+      "type": "Int",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.1
+    }
+  },
+  "0x287": {
+    "AMK_FR_Temp_Motor": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.1
+    },
+    "AMK_FR_Temp_Inverter": {
+      "type": "Int",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.1
+    },
+    "AMK_FR_Error_Info": {
+      "type": "Int",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 1.0
+    },
+    "AMK_FR_Temp_IGBT": {
+      "type": "Int",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.1
+    }
+  },
+  "0x288": {
+    "AMK_RL_Status": {
+      "type": "Uint",
+      "startbyte": 1,
+      "length": 1,
+      "factor": 1.0
+    },
+    "AMK_RL_Actual_velocity": {
+      "type": "Int",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 1.0
+    },
+    "AMK_RL_Torque_current": {
+      "type": "Int",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 6.54296875
+    },
+    "AMK_RL_Magnetizing_current": {
+      "type": "Int",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 6.54296875
+    }
+  },
+  "0x289": {
+    "AMK_RR_Status": {
+      "type": "Uint",
+      "startbyte": 1,
+      "length": 1,
+      "factor": 1.0
+    },
+    "AMK_RR_Actual_velocity": {
+      "type": "Int",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 1.0
+    },
+    "AMK_RR_Torque_current": {
+      "type": "Int",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 6.54296875
+    },
+    "AMK_RR_Magnetizing_current": {
+      "type": "Int",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 6.54296875
+    }
+  },
+  "0x28A": {
+    "AMK_RL_Temp_Motor": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.1
+    },
+    "AMK_RL_Temp_Inverter": {
+      "type": "Int",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.1
+    },
+    "AMK_RL_Error_Info": {
+      "type": "Int",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 1.0
+    },
+    "AMK_RL_Temp_IGBT": {
+      "type": "Int",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.1
+    }
+  },
+  "0x28B": {
+    "AMK_RR_Temp_Motor": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.1
+    },
+    "AMK_RR_Temp_Inverter": {
+      "type": "Int",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.1
+    },
+    "AMK_RR_Error_Info": {
+      "type": "Int",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 1.0
+    },
+    "AMK_RR_Temp_IGBT": {
+      "type": "Int",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.1
+    }
+  },
+  "0x290": {
+    "Simian_encoder_pos": {
+      "type": "Uint",
+      "startbyte": 1,
+      "length": 4,
+      "factor": 1.0
+    }
+  },
+  "0x294": {
+    "Simian_voltage_d": {
+      "type": "Int",
+      "startbyte": 1,
+      "length": 2,
+      "factor": 0.1
+    },
+    "Simian_voltage_q": {
+      "type": "Int",
+      "startbyte": 3,
+      "length": 2,
+      "factor": 0.1
+    },
+    "Simian_voltage_a": {
+      "type": "Int",
+      "startbyte": 5,
+      "length": 2,
+      "factor": 0.1
+    },
+    "Simian_voltage_b": {
+      "type": "Int",
+      "startbyte": 7,
+      "length": 2,
+      "factor": 0.1
+    }
+  },
+  "0x295": {
+    "Simian_torque_request": {
+      "type": "Int",
+      "startbyte": 1,
+      "length": 2,
+      "factor": 0.01
+    }
+  },
+  "0x350": {
+    "ECU_PLAY_RTDS": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 1,
+      "factor": 1.0
+    }
+  },
+  "0x351": {
+    "ECU_DRIVE_ENABLE": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 1,
+      "factor": 1.0
+    }
+  },
+  "0x352": {
+    "ECU_DRIVE_DISABLE": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 1,
+      "factor": 1.0
+    }
+  },
+  "0x353": {
+    "ECU_RESET_AMK_INVERTER_ERROR": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 1,
+      "factor": 1.0
+    }
+  },
+  "0x358": {
+    "ECU_INS_GPStime_year": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 1,
+      "factor": 1.0
+    },
+    "ECU_INS_GPStime_month": {
+      "type": "Uint",
+      "startbyte": 1,
+      "length": 1,
+      "factor": 1.0
+    },
+    "ECU_INS_GPStime_day": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 1,
+      "factor": 1.0
+    },
+    "ECU_INS_GPStime_hour": {
+      "type": "Uint",
+      "startbyte": 3,
+      "length": 1,
+      "factor": 1.0
+    },
+    "ECU_INS_GPStime_min": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 1,
+      "factor": 1.0
+    },
+    "ECU_INS_GPStime_sec": {
+      "type": "Uint",
+      "startbyte": 5,
+      "length": 1,
+      "factor": 1.0
+    }
+  },
+  "0x35C": {
+    "ECU_Alfa_r": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 1.0
+    }
+  },
+  "0x359": {
+    "ECU_Parameter_ID": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 1,
+      "factor": 1.0
+    },
+    "ECU_Parameter_value": {
+      "type": "Float",
+      "startbyte": 4,
+      "length": 4,
+      "factor": 1.0
+    }
+  },
+  "0x400": {
+    "ADC_FL_DamperFL": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.01
+    },
+    "ADC_FL_DamperRateFL": {
+      "type": "Int",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 1.0
+    },
+    "ADC_FL_GearTempFL": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.01
+    },
+    "ADC_FL_CoolingTempFL": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.01
+    }
+  },
+  "0x401": {
+    "ADC_FL_BrakePressure_1": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.001
+    },
+    "ADC_FL_BrakePressure_2": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.001
+    },
+    "ADC_FL_KERS": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.1
+    }
+  },
+  "0x402": {
+    "BSPD_Trigger": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 1,
+      "factor": 1.0
+    }
+  },
+  "0x410": {
+    "ADC_FR_DamperFR": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.01
+    },
+    "ADC_FR_DamperRateFR": {
+      "type": "Int",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 1.0
+    },
+    "ADC_FR_GearTempFR": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.01
+    },
+    "ADC_FR_CoolingTempFR": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.01
+    }
+  },
+  "0x411": {
+    "ADC_FR_TPS_left": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.1
+    },
+    "ADC_FR_TPS_right": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.1
+    }
+  },
+  "0x412": {
+    "ADC_FR_SteeringAngle": {
+      "type": "Int",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 1.0
+    },
+    "ADC_FR_SteeringSpeed": {
+      "type": "Float",
+      "startbyte": 4,
+      "length": 4,
+      "factor": 1.0
+    }
+  },
+  "0x420": {
+    "ADC_REAR_DamperRL": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.01
+    },
+    "ADC_REAR_DamperRateRL": {
+      "type": "Int",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 1.0
+    },
+    "ADC_REAR_DamperRR": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.01
+    },
+    "ADC_REAR_DamperRateRR": {
+      "type": "Int",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 1.0
+    }
+  },
+  "0x421": {
+    "ADC_REAR_GearTempRL": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.01
+    },
+    "ADC_REAR_GearTempRR": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.01
+    },
+    "ADC_REAR_CoolingTempRL": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.01
+    },
+    "ADC_REAR_CoolingTempRR": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.01
+    }
+  },
+  "0x428": {
+    "Charger_Data": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 1,
+      "factor": 1.0
+    }
+  },
+  "0x429": {
+    "Charger_Acknowledge": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 1,
+      "factor": 1.0
+    }
+  },
+  "0x317": {
+    "Charger_Error": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 4,
+      "factor": 1.0
+    }
+  },
+  "0x440": {
+    "BMS_Max_Cell_Voltage": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Average_Cell_Voltage": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Min_Cell_Voltage": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Max_Voltage_ID": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 1,
+      "factor": 1.0
+    },
+    "BMS_Min_Voltage_ID": {
+      "type": "Uint",
+      "startbyte": 7,
+      "length": 1,
+      "factor": 1.0
+    }
+  },
+  "0x441": {
+    "BMS_Max_Cell_Temperature": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Average_Cell_Temperature": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Min_Cell_Temperature": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Max_Temperature_ID": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 1,
+      "factor": 1.0
+    },
+    "BMS_Min_Temperature_ID": {
+      "type": "Uint",
+      "startbyte": 7,
+      "length": 1,
+      "factor": 1.0
+    }
+  },
+  "0x442": {
+    "BMS_Tractive_System_Voltage": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Tractive_System_Current": {
+      "type": "Int",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Tractive_System_Current_Transient": {
+      "type": "Int",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_State_of_Charge": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.01
+    }
+  },
+  "0x443": {
+    "BMS_Error_Flags": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 1.0
+    }
+  },
+  "0x444": {
+    "BMS_State": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 1,
+      "factor": 1.0
+    }
+  },
+  "0x445": {
+    "BMS_Tractive_System_Power": {
+      "type": "Int",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Voltage_Sum_of_Cells": {
+      "type": "Int",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.1
+    }
+  },
+  "0x44A": {
+    "BMS_max_isoSPI_fails": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 1,
+      "factor": 1.0
+    },
+    "BMS_max_isoSPI_fails_Slave_ID": {
+      "type": "Uint",
+      "startbyte": 1,
+      "length": 1,
+      "factor": 1.0
+    },
+    "BMS_max_isoSPI_fails_Register_ID": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 1,
+      "factor": 1.0
+    }
+  },
+  "0x450": {
+    "ECU_System_Status": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 1,
+      "factor": 1.0
+    },
+    "ECU_Torque_Allocation": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 1,
+      "factor": 1.0
+    },
+    "ECU_Vehicle_State": {
+      "type": "Uint",
+      "startbyte": 3,
+      "length": 1,
+      "factor": 1.0
+    }
+  },
+  "0x451": {
+    "ECU_Slip_ratio_FL": {
+      "type": "Int",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.01
+    },
+    "ECU_Slip_ratio_FR": {
+      "type": "Int",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.01
+    },
+    "ECU_Slip_ratio_RL": {
+      "type": "Int",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.01
+    },
+    "ECU_Slip_ratio_RR": {
+      "type": "Int",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.01
+    }
+  },
+  "0x452": {
+    "ECU_Fx_div_Fz_FL": {
+      "type": "Int",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.001
+    },
+    "ECU_Fx_div_Fz_FR": {
+      "type": "Int",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.001
+    },
+    "ECU_Fx_div_Fz_RL": {
+      "type": "Int",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.001
+    },
+    "ECU_Fx_div_Fz_RR": {
+      "type": "Int",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.001
+    }
+  },
+  "0x453": {
+    "ECU_Fz_damper_estimate_FL": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.01
+    },
+    "ECU_Fz_damper_estimate_FR": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.01
+    },
+    "ECU_Fz_damper_estimate_RL": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.01
+    },
+    "ECU_Fz_damper_estimate_RR": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.01
+    }
+  },
+  "0x454": {
+    "ECU_Sensor_Status": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 8,
+      "factor": 1.0
+    }
+  },
+  "0x456": {
+    "ECU_INS_Longtitude": {
+      "type": "Float",
+      "startbyte": 0,
+      "length": 4,
+      "factor": 1.0
+    },
+    "ECU_INS_Latitude": {
+      "type": "Float",
+      "startbyte": 4,
+      "length": 4,
+      "factor": 1.0
+    }
+  },
+  "0x457": {
+    "ECU_INS_Altitude": {
+      "type": "Float",
+      "startbyte": 0,
+      "length": 4,
+      "factor": 1.0
+    }
+  },
+  "0x458": {
+    "ECU_INS_Yaw_rate": {
+      "type": "Int",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.001
+    },
+    "ECU_INS_Yaw_acceleration": {
+      "type": "Int",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.01
+    },
+    "ECU_INS_Roll_angle": {
+      "type": "Float",
+      "startbyte": 4,
+      "length": 4,
+      "factor": 0.001
+    }
+  },
+  "0x459": {
+    "ECU_INS_AX": {
+      "type": "Int",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.01
+    },
+    "ECU_INS_AY": {
+      "type": "Int",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.01
+    },
+    "ECU_INS_VX": {
+      "type": "Int",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.01
+    },
+    "ECU_INS_VY": {
+      "type": "Int",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.01
+    }
+  },
+  "0x45A": {
+    "ECU_INS_Status_Attitude": {
+      "type": "UInt",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 1.0
+    },
+    "ECU_INS_Status_INS": {
+      "type": "UInt",
+      "startbyte": 2,
+      "length": 1,
+      "factor": 1.0
+    }
+  },
+  "0x45B": {
+    "ECU_INS_GPSfix": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 1,
+      "factor": 1.0
+    },
+    "ECU_INS_Tracked_satelites": {
+      "type": "Uint",
+      "startbyte": 1,
+      "length": 1,
+      "factor": 1.0
+    }
+  },
+  "0x45C": {
+    "ECU_Fx_estimate_FL": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.1
+    },
+    "ECU_Fx_estimate_FR": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.1
+    },
+    "ECU_Fx_estimate_RL": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.1
+    },
+    "ECU_Fx_estimate_RR": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.1
+    }
+  },
+  "0x45D": {
+    "ECU_RPM_derivative_FL": {
+      "type": "Int",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 1.0
+    },
+    "ECU_RPM_derivative_FR": {
+      "type": "Int",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 1.0
+    },
+    "ECU_RPM_derivative_RL": {
+      "type": "Int",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 1.0
+    },
+    "ECU_RPM_derivative_RR": {
+      "type": "Int",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 1.0
+    }
+  },
+  "0x45E": {
+    "ECU_Soft_BSPD_status": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 1,
+      "factor": 1.0
+    }
+  },
+  "0x45F": {
+    "ECU_Filtered_Steering_Angle": {
+      "type": "Int",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.001
+    },
+    "ECU_Filtered_Steering_Rate": {
+      "type": "Int",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.01
+    }
+  },
+  "0x460": {
+    "GLV_Cell_Voltage_0": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "GLV_Cell_Voltage_1": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "GLV_Cell_Voltage_2": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "GLV_Cell_Voltage_3": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.0001
+    }
+  },
+  "0x461": {
+    "GLV_Cell_Voltage_4": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "GLV_Cell_Voltage_5": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.0001
+    }
+  },
+  "0x462": {
+    "GLV_Cell_Temperature_0": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.01
+    },
+    "GLV_Cell_Temperature_1": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.01
+    },
+    "GLV_Cell_Temperature_2": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.01
+    },
+    "GLV_Cell_Temperature_3": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.01
+    }
+  },
+  "0x463": {
+    "GLV_Cell_Temperature_4": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.01
+    }
+  },
+  "0x465": {
+    "GLV_Min_Cell_Voltage": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "GLV_Max_Cell_Voltage": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "GLV_Tot_Cell_Voltage": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 4,
+      "factor": 0.0001
+    }
+  },
+  "0x466": {
+    "GLV_Min_Cell_Temperature": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.01
+    },
+    "GLV_Max_Cell_Temperature": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.01
+    }
+  },
+  "0x467": {
+    "GLV_State_of_Charge": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 1,
+      "factor": 1.0
+    },
+    "GLV_Battery_Charge_Capacity": {
+      "type": "Uint",
+      "startbyte": 1,
+      "length": 4,
+      "factor": 0.001
+    }
+  },
+  "0x470": {
+    "DASH_REQUEST_DRIVE_ENABLE": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 1,
+      "factor": 1.0
+    }
+  },
+  "0x472": {
+    "DASH_RTDS_FINISHED": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 1,
+      "factor": 1.0
+    }
+  },
+  "0x475": {
+    "DASH_REQUEST_KERS_ACTIVATION": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 1,
+      "factor": 1.0
+    }
+  },
+  "0x47F": {
+    "DASH_ALIVE_STATUS_BITS": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 1.0
+    }
+  },
+  "0x490": {
+    "BMS_IMD_Shutdown_open": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 1,
+      "factor": 1.0
+    }
+  },
+  "0x491": {
+    "BMS_IMD_State": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 1,
+      "factor": 1.0
+    }
+  },
+  "0x4C0": {
+    "Alive_message": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 1,
+      "factor": 1.0
+    }
+  },
+  "0x500": {
+    "BMS_Cell_Voltage_0": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_1": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_2": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_3": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.0001
+    }
+  },
+  "0x501": {
+    "BMS_Cell_Voltage_4": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_5": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_6": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_7": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.0001
+    }
+  },
+  "0x502": {
+    "BMS_Cell_Voltage_8": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_9": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_10": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_11": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.0001
+    }
+  },
+  "0x503": {
+    "BMS_Cell_Voltage_12": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_13": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_14": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_15": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.0001
+    }
+  },
+  "0x504": {
+    "BMS_Cell_Voltage_16": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_17": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_18": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_19": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.0001
+    }
+  },
+  "0x505": {
+    "BMS_Cell_Voltage_20": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_21": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_22": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_23": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.0001
+    }
+  },
+  "0x506": {
+    "BMS_Cell_Voltage_24": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_25": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_26": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_27": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.0001
+    }
+  },
+  "0x507": {
+    "BMS_Cell_Voltage_28": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_29": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_30": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_31": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.0001
+    }
+  },
+  "0x508": {
+    "BMS_Cell_Voltage_32": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_33": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_34": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_35": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.0001
+    }
+  },
+  "0x509": {
+    "BMS_Cell_Voltage_36": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_37": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_38": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_39": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.0001
+    }
+  },
+  "0x50A": {
+    "BMS_Cell_Voltage_40": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_41": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_42": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_43": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.0001
+    }
+  },
+  "0x50B": {
+    "BMS_Cell_Voltage_44": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_45": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_46": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_47": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.0001
+    }
+  },
+  "0x50C": {
+    "BMS_Cell_Voltage_48": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_49": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_50": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_51": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.0001
+    }
+  },
+  "0x50D": {
+    "BMS_Cell_Voltage_52": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_53": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_54": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_55": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.0001
+    }
+  },
+  "0x50E": {
+    "BMS_Cell_Voltage_56": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_57": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_58": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_59": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.0001
+    }
+  },
+  "0x50F": {
+    "BMS_Cell_Voltage_60": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_61": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_62": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_63": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.0001
+    }
+  },
+  "0x510": {
+    "BMS_Cell_Voltage_64": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_65": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_66": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_67": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.0001
+    }
+  },
+  "0x511": {
+    "BMS_Cell_Voltage_68": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_69": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_70": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_71": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.0001
+    }
+  },
+  "0x512": {
+    "BMS_Cell_Voltage_72": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_73": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_74": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_75": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.0001
+    }
+  },
+  "0x513": {
+    "BMS_Cell_Voltage_76": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_77": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_78": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_79": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.0001
+    }
+  },
+  "0x514": {
+    "BMS_Cell_Voltage_80": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_81": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_82": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_83": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.0001
+    }
+  },
+  "0x515": {
+    "BMS_Cell_Voltage_84": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_85": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_86": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_87": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.0001
+    }
+  },
+  "0x516": {
+    "BMS_Cell_Voltage_88": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_89": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_90": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_91": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.0001
+    }
+  },
+  "0x517": {
+    "BMS_Cell_Voltage_92": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_93": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_94": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_95": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.0001
+    }
+  },
+  "0x518": {
+    "BMS_Cell_Voltage_96": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_97": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_98": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_99": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.0001
+    }
+  },
+  "0x519": {
+    "BMS_Cell_Voltage_100": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_101": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_102": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_103": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.0001
+    }
+  },
+  "0x51A": {
+    "BMS_Cell_Voltage_104": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_105": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_106": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_107": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.0001
+    }
+  },
+  "0x51B": {
+    "BMS_Cell_Voltage_108": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_109": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_110": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_111": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.0001
+    }
+  },
+  "0x51C": {
+    "BMS_Cell_Voltage_112": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_113": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_114": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_115": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.0001
+    }
+  },
+  "0x51D": {
+    "BMS_Cell_Voltage_116": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_117": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_118": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_119": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.0001
+    }
+  },
+  "0x51E": {
+    "BMS_Cell_Voltage_120": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_121": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_122": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_123": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.0001
+    }
+  },
+  "0x51F": {
+    "BMS_Cell_Voltage_124": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_125": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_126": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_127": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.0001
+    }
+  },
+  "0x520": {
+    "BMS_Cell_Voltage_128": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_129": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_130": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.0001
+    },
+    "BMS_Cell_Voltage_131": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.0001
+    }
+  },
+  "0x540": {
+    "BMS_Cell_Temperature_0": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_1": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_2": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_3": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.1
+    }
+  },
+  "0x541": {
+    "BMS_Cell_Temperature_4": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_5": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_6": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_7": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.1
+    }
+  },
+  "0x542": {
+    "BMS_Cell_Temperature_8": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_9": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_10": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_11": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.1
+    }
+  },
+  "0x543": {
+    "BMS_Cell_Temperature_12": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_13": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_14": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_15": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.1
+    }
+  },
+  "0x544": {
+    "BMS_Cell_Temperature_16": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_17": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_18": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_19": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.1
+    }
+  },
+  "0x545": {
+    "BMS_Cell_Temperature_20": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_21": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_22": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_23": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.1
+    }
+  },
+  "0x546": {
+    "BMS_Cell_Temperature_24": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_25": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_26": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_27": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.1
+    }
+  },
+  "0x547": {
+    "BMS_Cell_Temperature_28": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_29": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_30": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_31": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.1
+    }
+  },
+  "0x548": {
+    "BMS_Cell_Temperature_32": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_33": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_34": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_35": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.1
+    }
+  },
+  "0x549": {
+    "BMS_Cell_Temperature_36": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_37": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_38": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_39": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.1
+    }
+  },
+  "0x54A": {
+    "BMS_Cell_Temperature_40": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_41": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_42": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_43": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.1
+    }
+  },
+  "0x54B": {
+    "BMS_Cell_Temperature_44": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_45": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_46": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_47": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.1
+    }
+  },
+  "0x54C": {
+    "BMS_Cell_Temperature_48": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_49": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_50": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_51": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.1
+    }
+  },
+  "0x54D": {
+    "BMS_Cell_Temperature_52": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_53": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_54": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_55": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.1
+    }
+  },
+  "0x54E": {
+    "BMS_Cell_Temperature_56": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_57": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_58": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_59": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.1
+    }
+  },
+  "0x54F": {
+    "BMS_Cell_Temperature_60": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_61": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_62": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_63": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.1
+    }
+  },
+  "0x550": {
+    "BMS_Cell_Temperature_64": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_65": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_66": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_67": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.1
+    }
+  },
+  "0x551": {
+    "BMS_Cell_Temperature_68": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_69": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_70": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_71": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.1
+    }
+  },
+  "0x552": {
+    "BMS_Cell_Temperature_72": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_73": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_74": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_75": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.1
+    }
+  },
+  "0x553": {
+    "BMS_Cell_Temperature_76": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_77": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_78": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_79": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.1
+    }
+  },
+  "0x554": {
+    "BMS_Cell_Temperature_80": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_81": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_82": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_83": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.1
+    }
+  },
+  "0x555": {
+    "BMS_Cell_Temperature_84": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_85": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_86": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_87": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.1
+    }
+  },
+  "0x556": {
+    "BMS_Cell_Temperature_88": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_89": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_90": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_91": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.1
+    }
+  },
+  "0x557": {
+    "BMS_Cell_Temperature_92": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_93": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_94": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_95": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.1
+    }
+  },
+  "0x558": {
+    "BMS_Cell_Temperature_96": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_97": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_98": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_99": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.1
+    }
+  },
+  "0x559": {
+    "BMS_Cell_Temperature_100": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_101": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_102": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_103": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.1
+    }
+  },
+  "0x55A": {
+    "BMS_Cell_Temperature_104": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_105": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_106": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_107": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.1
+    }
+  },
+  "0x55B": {
+    "BMS_Cell_Temperature_108": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_109": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_110": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_111": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.1
+    }
+  },
+  "0x55C": {
+    "BMS_Cell_Temperature_112": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_113": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_114": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_115": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.1
+    }
+  },
+  "0x55D": {
+    "BMS_Cell_Temperature_116": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_117": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_118": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_119": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.1
+    }
+  },
+  "0x55E": {
+    "BMS_Cell_Temperature_120": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_121": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_122": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_123": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.1
+    }
+  },
+  "0x55F": {
+    "BMS_Cell_Temperature_124": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_125": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_126": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_127": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.1
+    }
+  },
+  "0x560": {
+    "BMS_Cell_Temperature_128": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_129": {
+      "type": "Uint",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_130": {
+      "type": "Uint",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.1
+    },
+    "BMS_Cell_Temperature_131": {
+      "type": "Uint",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.1
+    }
+  },
+  "0x650": {
+    "ECU_TV_Max_motor_torque_FL": {
+      "type": "Int",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.01
+    },
+    "ECU_TV_Max_motor_torque_FR": {
+      "type": "Int",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.01
+    },
+    "ECU_TV_Max_motor_torque_RL": {
+      "type": "Int",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.01
+    },
+    "ECU_TV_Max_motor_torque_RR": {
+      "type": "Int",
+      "startbyte": 6,
+      "length": 2,
+      "factor": 0.01
+    }
+  },
+  "0x653": {
+    "ECU_TV_Yaw_rate_ref": {
+      "type": "Int",
+      "startbyte": 0,
+      "length": 2,
+      "factor": 0.001
+    },
+    "ECU_TV_Mz_ref": {
+      "type": "Int",
+      "startbyte": 2,
+      "length": 2,
+      "factor": 0.1
+    },
+    "ECU_TV_Mz_reserved": {
+      "type": "Int",
+      "startbyte": 4,
+      "length": 2,
+      "factor": 0.1
+    },
+    "ECU_TV_Driver_torque_request": {
+      "type": "Int",
+      "startbyte": 6,
+      "length": 1,
+      "factor": 2.0
+    },
+    "ECU_TV_Percentage_of_req_torque_allocated": {
+      "type": "Int",
+      "startbyte": 6,
+      "length": 1,
+      "factor": 2.0
+    }
+  },
+  "0x654": {
+    "ECU_TV_Active_constraints": {
+      "type": "Uint",
+      "startbyte": 0,
+      "length": 8,
+      "factor": 1.0
+    }
+  }
+}
