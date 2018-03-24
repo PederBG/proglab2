@@ -1,78 +1,10 @@
 {
   "0x010": {
-    "Simian_dataLogger_playback_Ia": {
-      "type": "Int",
-      "startbyte": 1,
-      "length": 2,
-      "factor": 0.01
+    "Undercurrent": {
+      "bytenumber": 1,  
     },
-    "Simian_dataLogger_playback_Ib": {
-      "type": "Int",
-      "startbyte": 3,
-      "length": 2,
-      "factor": 0.01
-    }
-  },
-  "0x011": {
-    "Simian_dataLogger_playback_Id": {
-      "type": "Int",
-      "startbyte": 1,
-      "length": 2,
-      "factor": 0.01
-    },
-    "Simian_dataLogger_playback_Iq": {
-      "type": "Int",
-      "startbyte": 3,
-      "length": 2,
-      "factor": 0.01
-    },
-    "Simian_dataLogger_playback_rpm": {
-      "type": "Int",
-      "startbyte": 5,
-      "length": 2,
-      "factor": 1.0
-    }
-  },
-  "0x012": {
-    "Simian_dataLogger_playback_encoder_pos": {
-      "type": "Uint",
-      "startbyte": 1,
-      "length": 4,
-      "factor": 1.0
-    }
-  },
-  "0x013": {
-    "Simian_dataLogger_playback_encoder_raw": {
-      "type": "Uint",
-      "startbyte": 1,
-      "length": 4,
-      "factor": 1.0
-    }
-  },
-  "0x185": {
-    "AMK_FL_Setpoint_control_word": {
-      "type": "Uint",
-      "startbyte": 1,
-      "length": 1,
-      "factor": 1.0
-    },
-    "AMK_FL_Setpoint_RPM_request": {
-      "type": "Int",
-      "startbyte": 2,
-      "length": 2,
-      "factor": 1.0
-    },
-    "AMK_FL_Setpoint_positive_torque_limit": {
-      "type": "Int",
-      "startbyte": 4,
-      "length": 2,
-      "factor": 0.0098
-    },
-    "AMK_FL_Setpoint_negative_torque_limit": {
-      "type": "Int",
-      "startbyte": 6,
-      "length": 2,
-      "factor": 0.0098
+    "Overvoltage": {
+      "bytenumber": 1,
     }
   }
 }
